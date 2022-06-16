@@ -1,0 +1,63 @@
+<div class="card">
+		<div class="d-flex align-items-center justify-content-center card-header" style="background-color:#7fbde3; color: white;">
+			<h2>PLAYER INFORMATION</h2></br>
+		</div></br>
+<div class = "card-body">
+			<%= form_with model: @student do |f| %>
+		 <div class="row justify-content-center">
+			  <div class="col-md-6">
+			    <%= f.label :school_name %><br>
+			    <%= f.select :school_name,options_for_select([['South Lakes High School', '0'], ['Hughes Middle School', '1'], ['Herndon High School', '2'], ['Fairfax County Public School', '3']]), { include_blank: '------Select School ------'}, {class: 'form-control' , :required => true} %>
+			  </div>
+		 </div><br>
+		 <div class="row justify-content-center">
+			  <div class="col-md-6">
+			    <%= f.label :student_name, 'Name' %><br>
+			    <%= f.text_field :student_name, class: 'form-control', required: :true %>
+			  </div>
+		 </div><br>
+		 <div class="row justify-content-center">
+			  <div class="col-md-6">
+			    <%= f.label :student_email, 'Email' %><br>
+			    <%= f.text_field :student_email, class: 'form-control' %>
+			  </div>
+		 </div><br>
+		 <div class="row justify-content-center">
+			  <div class="col-md-6">
+			    <%= f.label :parent_email, "Parent's Email" %><br>
+			    <%= f.text_field :parent_email, class: 'form-control', required: :true %>
+			  </div>
+		 </div><br>
+		 <div class="row justify-content-center">
+			  <div class="col-md-6">
+			    <%= f.label :type_of_sport, 'Sport' %><br>
+			    <%= f.select :type_of_sport, options_for_select(sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-select'} %>
+			  </div>
+		</div><br>
+		 <div class="row justify-content-center">
+			  <div class="col-md-6">
+			    <%= f.label :team_type, 'Team' %><br>
+			    <%= f.select :team_type,options_for_select(team_name),  { include_blank: '----- Select Team ------'}, {class: ' form-select'} %>
+			  </div>  
+		 </div>
+		 <br>
+
+		  <div class="d-grid gap-2 col-6 mx-auto">
+		    <%= f.button "Submit", type: "submit", :class=> "btn", :style=>  'background-color: #7fbde3; color: white;' %>
+		  </div>
+		<% end %>
+		<br>
+
+</div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    setTimeout(function(){
+    $('.flash-panel').fadeOut();
+    }, 2000);
+  })
+</script>
