@@ -43,6 +43,7 @@
 			 </div>
 			 
 			 <br>
+			 <%= f.hidden_field :event_date, value: Date.current%>
 			 <%= f.hidden_field :school_name,  			value: @school.school_name %>
 			 <%= f.hidden_field :season_type,  			value: @school.season_name %>
 			 <%= f.hidden_field :photographer_id,   value: current_user.id %>
