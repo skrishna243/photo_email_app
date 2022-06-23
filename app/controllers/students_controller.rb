@@ -5,28 +5,25 @@ class StudentsController < ApplicationController
 		end
 	end
 
-	def student_creation
-		Student.create(student_name: params[:student_name], student_email: params[:student_email], parent_email: params[:parent_email], 
-					   type_of_sport: params[:type_of_sport], team_type: params[:team_type], school_name: params[:school_name])
-		redirect_to root_path, notice: "Student Successfully created"
-	end
 
 	def new
+		@school = School.find(params[:school_id])
 		@student = Student.new
 	end
 
 	def create
-		@student = Student.new(student_params)
+		@school = School.find(params[:school_id])
+		@student = @school.students.create(student_params)
 		if @student.save
-			redirect_to root_path, notice: "Student Successfully created"
+			redirect_to new_school_student_path, notice: "Have a Good Season!"
 		else
-			redirect_to root_path, alert: "Student creation failure"
+			redirect_to new_school_student_path, alert: "Player creation failed"
 		end
 	end
 
 	private
 		def student_params
-			params.require(:student).permit(:school_name, :student_name, :student_email, :parent_email, :type_of_sport, :team_type)
+			params.require(:student).permit(:school_name, :student_name, :student_email, :parent_email, :type_of_sport, :team_type, :photographer_id, :season_type)
 		end
 	
 

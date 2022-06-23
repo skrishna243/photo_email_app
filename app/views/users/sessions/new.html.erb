@@ -1,28 +1,42 @@
-<div class="card" style="width: 18rem;">
+<div lass="row align-items-center vh-100">
+  <div class="col-6 mx-auto">
+    <div class="card shadow border">
+      <div class="card-header header-style" ><h2 class="d-flex justify-content-center" >Log in</h2></div>
+        <div class="card-body d-flex flex-column align-items-center">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
 
-<h2>Log in</h2>
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <div class="field">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "current-password" %>
+            </div>
+
+            <% if devise_mapping.rememberable? %>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+            <% end %>
+
+            <div class="actions">
+              <%= f.submit "Log in", class: "btn", :style=>  'background-color: #7fbde3; color: white;' %>
+            </div>
+          <% end %>
+            <!-- <br><br> -->
+        </div>
+        <%= render "users/shared/links" %>
     </div>
-
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
-    </div>
-
-    <% if devise_mapping.rememberable? %>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
-      </div>
-    <% end %>
-
-    <div class="actions">
-      <%= f.submit "Log in" %>
-    </div>
-  <% end %>
+  </div>
 </div>
 
-<%= render "users/shared/links" %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    setTimeout(function(){
+    $('.flash-panel').fadeOut();
+    }, 2000);
+  })
+</script>

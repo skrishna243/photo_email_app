@@ -16,14 +16,51 @@ module ApplicationHelper
 		]
 	end
 
-	def sport_name
+	def fall_sport_name
 		[
-			['None', '0'],
-			['FootBall', '1'], 
-			['VolleyBall', '2'], 
-			['Ice Hockey', '3'], 
-			['BasketBall', '4']]
-		
+			['None', 'None'],
+			['Cheer', 'Cheer'], 
+			['Crew', 'Crew'], 
+			['Cross Country', 'Cross Country'], 
+			['Field Hockey', 'Field Hockey'],
+			['Football', 'Football'],
+			['Golf', 'Golf'],
+			['POMS', 'POMS'], 
+			['Soccer', 'Soccer'], 
+			['Tennis', 'Tennis'], 
+			['Unified Tennis', 'Unified Tennis'],
+			['VolleyBall', 'VolleyBall']
+		]
+	end
+
+	def spring_sport_name
+		[
+			['Archery', 'Archery'],
+			['Baseball', 'Baseball'],
+			['Crew', 'Crew'],
+			['Lacrosse', 'Lacrosse'],
+			['Outdoor Track', 'Outdoor Track'], 
+			['Rugby', 'Rugby'],
+			['Soccer', 'Soccer'],
+			['Softball', 'Softball'],
+			['Tennis', 'Tennis']	 	
+		]
+	end
+
+	def winter_sport_name
+		[
+			['Basketball', 'Basketball'],
+			['Bocce Ball', 'Bocce Ball'],
+			['Cheer', 'Cheer'],
+			['Dance', 'Dance'],
+			['Gymnastics', 'Gymnastics'],
+			['Indoor Track', 'Indoor Track'], 
+			['Marching Band', 'Marching Band'],
+			['Middle School Basketball', 'Middle School Basketball'],	
+			['Swim', 'Swim'],	
+			['Wrestling', 'Wrestling'],
+			 	
+		]
 	end
 
 	def scl_name(school_name)
@@ -66,6 +103,19 @@ module ApplicationHelper
 			'Varsity'
 		else 'N/A'
 		end	
+	end
+
+	def date_formatted(date)
+	    date.present? ? date.strftime('%b %d, %Y') : ''
+	end
+
+	def season_name
+		[
+			['FALL', 'FALL'],
+			['SPRING', 'SPRING'], 
+			['WINTER', 'WINTER'], 
+		]
+		
 	end
 
 

@@ -1,63 +1,82 @@
-<div class="card">
-		<div class="d-flex align-items-center justify-content-center card-header" style="background-color:#7fbde3; color: white;">
-			<h2>PLAYER INFORMATION</h2></br>
-		</div></br>
-<div class = "card-body">
-			<%= form_with model: @student do |f| %>
-		 <div class="row justify-content-center">
-			  <div class="col-md-6">
-			    <%= f.label :school_name %><br>
-			    <%= f.select :school_name,options_for_select([['South Lakes High School', '0'], ['Hughes Middle School', '1'], ['Herndon High School', '2'], ['Fairfax County Public School', '3']]), { include_blank: '------Select School ------'}, {class: 'form-control' , :required => true} %>
-			  </div>
-		 </div><br>
-		 <div class="row justify-content-center">
-			  <div class="col-md-6">
-			    <%= f.label :student_name, 'Name' %><br>
-			    <%= f.text_field :student_name, class: 'form-control', required: :true %>
-			  </div>
-		 </div><br>
-		 <div class="row justify-content-center">
-			  <div class="col-md-6">
-			    <%= f.label :student_email, 'Email' %><br>
-			    <%= f.text_field :student_email, class: 'form-control' %>
-			  </div>
-		 </div><br>
-		 <div class="row justify-content-center">
-			  <div class="col-md-6">
-			    <%= f.label :parent_email, "Parent's Email" %><br>
-			    <%= f.text_field :parent_email, class: 'form-control', required: :true %>
-			  </div>
-		 </div><br>
-		 <div class="row justify-content-center">
-			  <div class="col-md-6">
-			    <%= f.label :type_of_sport, 'Sport' %><br>
-			    <%= f.select :type_of_sport, options_for_select(sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-select'} %>
-			  </div>
-		</div><br>
-		 <div class="row justify-content-center">
-			  <div class="col-md-6">
-			    <%= f.label :team_type, 'Team' %><br>
-			    <%= f.select :team_type,options_for_select(team_name),  { include_blank: '----- Select Team ------'}, {class: ' form-select'} %>
-			  </div>  
-		 </div>
-		 <br>
+<div lass="row align-items-center vh-100 " >
+  <div class="col-8 mx-auto" id="test-class">
+	<div class="card shadow border">
+			<div class="card-header header-style">
+				<h2 class="text-center"><%= @school.school_name %> &nbsp; <br>Player Information </h2>
+			</div>
+	<div class = "card-body d-flex flex-column align-items-center">
+				<%= form_with model: [@school, @school.students.build] do |f| %>
+			 <div class="row">
+				    <%= f.label :type_of_sport, 'Sport' %><br>
+				   <% if @school.season_name == "FALL" %>
+				    	<%= f.select :type_of_sport, options_for_select(fall_sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-control'} %>
+				    <% elsif @school.season_name == "SPRING" %>
+				    	<%= f.select :type_of_sport, options_for_select(spring_sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-control'} %>
+				    <% else %>
+				    	<%= f.select :type_of_sport, options_for_select(winter_sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-control'} %>
+				    <% end %>
+				 
+				</div>
+			 <div class="row">
+				  
+				    <%= f.label :team_type, 'Team' %><br>
+				    <%= f.select :team_type,options_for_select(team_name),  { include_blank: '----- Select Team ------'}, {class: ' form-control'} %>
+				 
+			 </div>
+			 <div class="row">
+				  
+				    <%= f.label :student_name, 'Name' %><br>
+				    <%= f.text_field :student_name, class: 'form-control', required: :true %>
+				  
+			 </div>
+			 <div class="row">
+				 
+				    <%= f.label :student_email, 'Email' %><br>
+				    <%= f.text_field :student_email, class: 'form-control' %>
+				 
+			 </div>
+			 <div class="row">
+				  
+				    <%= f.label :parent_email, "Parent's Email" %><br>
+				    <%= f.text_field :parent_email, class: 'form-control', required: :true %>
+				 
+			 </div>
+			 
+			 <br>
+			 <%= f.hidden_field :school_name,  			value: @school.school_name %>
+			 <%= f.hidden_field :season_type,  			value: @school.season_name %>
+			 <%= f.hidden_field :photographer_id,   value: current_user.id %>
 
-		  <div class="d-grid gap-2 col-6 mx-auto">
-		    <%= f.button "Submit", type: "submit", :class=> "btn", :style=>  'background-color: #7fbde3; color: white;' %>
-		  </div>
-		<% end %>
-		<br>
+			  <div class="d-grid gap-2 col-6 mx-auto">
+			    <%= f.button "Submit", type: "submit", :class=> "btn", :style=>  'background-color: #7fbde3; color: white;' %>
+			  </div>
+			<% end %>
+			
 
+	</div>
 </div>
 </div>
-
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript">
+
+	
+	
   $(document).ready(function(){
+  	
+  	if($(window).width() > 767) {
+        $('#test-class').addClass('col-8');
+    }else{
+        $('#test-class').removeClass('col-8');
+    }
+
     setTimeout(function(){
-    $('.flash-panel').fadeOut();
+    	$('.flash-panel').fadeOut();
     }, 2000);
+
   })
+
+
 </script>
