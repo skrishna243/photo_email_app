@@ -13,17 +13,10 @@
  *= require_tree .
  *= require_self
  */
-/*.panel {
-    margin-bottom: 20px;
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
-    box-shadow: 0 1px 1pxrgba(0,0,0,.05);
+.nav_buttons{
+    font-size: 20px;
+    font-weight: 600;
 }
-.panel-info{
-    border-color: #BCE8F1;;
-}*/
 .custom-nav-group-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -35,8 +28,19 @@
     max-height: 70px;
 }
 
+.btn-default{
+    background-color:#CDCCCC; 
+    color: #333;
+    border-color:  #ccc;
+    }
+
 .panel-body {
     padding: 15px;
+}
+.header-style{
+    background-color:#B6D9DF; 
+    color: #fff;
+    border-color:  #B6D9DF;
 }
 
 .form-panel{

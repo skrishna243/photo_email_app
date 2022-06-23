@@ -5,10 +5,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- CSS only -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
@@ -18,31 +19,37 @@
 
   <body>
 
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <nav class="navbar navbar-light" style="background-color: #B6D9DF;">
     <div class="container">
-      <div class="navbar-header">
-        <%= link_to root_path do %>
-          <%= image_tag 'logo.png', class: "header-title-logo", alt: "VictorO'Neill Studios"%>
-        <% end %>
-        <div style ="position: absolute;right:0;top:0">
-           <% if user_signed_in? %>
-              <%= link_to "Log Out", destroy_user_session_path,  :method => :delete,  class: "btn"  %>
-           <% else %>
-              <%= link_to "Log In", new_user_session_path, class: "btn "  %>
-            <% end %>
-
-          
+      <% if user_signed_in? %>
+        <div class="navbar-brand">
+          <%= link_to schools_path do %>
+            <%= image_tag 'logo.png', class: "header-title-logo", alt: "VictorO'Neill Studios"%>
+          <% end %>
         </div>
-      </div>
+          <div >
+                <%= link_to "Reports", reports_path,  class: "btn nav_buttons"  %>
+                <%= link_to "Log Out", destroy_user_session_path,  :method => :delete,  class: "btn nav_buttons"  %>
+          </div>
+      <% else %>
+        <div class="navbar-brand">
+          <%= link_to root_path do %>
+            <%= image_tag 'logo.png', class: "header-title-logo", alt: "VictorO'Neill Studios"%>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </nav>
-  <br><br>
+  <br>
 
-  <% flash.each do |type, msg| %>
-  <div class="alert alert-info flash-panel">
+
+<% flash.each do |type, msg| %>
+  <div class="alert alert-success text-center flash-panel" style="font-size: 30px;">
     <%= msg %>
   </div>
+  <br>
 <% end %>
+
 
   <div class="container">
     <%= yield %>
@@ -60,5 +67,9 @@
 <nav id="cssnav" class="navbar navbar-light navbar-expand-sm fixed-bottom menu_main_nav_area" style="background-color: #e3f2fd; ">
   <p style="text-align: center";>All Rights Reserved</p>
 </nav> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>

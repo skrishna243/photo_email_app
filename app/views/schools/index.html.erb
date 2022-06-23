@@ -1,0 +1,75 @@
+<div class="card">
+<div class="card-header header-style"><h3>ADD SCHOOL</h3></div>
+<div class="card-body">
+	<%= button_tag('New School', class: 'btn btn-info btn-sm-block float-right fa fa-plus', id: 'add_school') %>
+	 <p>Please use this section to add School Information</p>
+</div>
+</div>
+
+<br><br><br>
+
+<div class="card">
+  <div class="card-header header-style"><h3>SCHOOL DETAILS</h3></div>
+  <div class="card-body">
+   <div class="table-responsive">
+	<table class="table table-bordered">
+	<thead>
+		<th>School  Name</th>
+		<th>Season Name</th>
+		<th>Added At</th>
+		<th>Actions</th>
+	</thead>
+	<tbody>
+		<% @schools.each do |sch| %>
+			<tr>
+				<td><%= (sch.school_name).upcase %></td>
+				<td><%= (sch.season_name).upcase %></td>
+				<td><%= date_formatted(sch.created_at)%></td>
+				<td> <%= link_to 'View', new_school_student_path(sch.id),  class: 'btn btn-success btn-xs' %></td>
+			</tr>
+		<% end %>
+	</tbody>
+	</table>
+	
+</div>
+</div>
+</div>
+
+
+    <div class="modal fade" id="school_modal_container" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	  <!-- <div class="modal-dialog" role="document"> -->
+	    <div class="modal-content">
+	      <div class="modal-header"><h4 class="modal-title m0">New School</h4></div>
+	      <div class="modal-body"></div>	    
+        </div>
+	  </div>
+	</div>
+
+
+<script type="text/javascript">
+
+	function showNewSchoolModal() {
+    $.ajax({
+      url: 'schools/new',
+      success: function(new_prescriber_patient_body) {
+        $('#school_modal_container .modal-body').html(new_prescriber_patient_body);
+        $('.modal').modal('hide');
+        $('#school_modal_container').modal('show');
+        $('#school_modal_container .modal-title').html('New School');
+      }
+    });
+  }
+	
+
+  $(document).ready(function(){
+    setTimeout(function(){
+    $('.flash-panel').fadeOut();
+    }, 2000);
+
+    $('#add_school').on('click', function() {
+      showNewSchoolModal();
+    });
+
+  })
+</script>
