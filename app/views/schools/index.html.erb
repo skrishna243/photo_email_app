@@ -8,6 +8,8 @@
 
 <br><br><br>
 
+<% unless @schools.nil? || @schools.empty? %>
+
 <div class="card">
   <div class="card-header header-style"><h3>SCHOOL DETAILS</h3></div>
   <div class="card-body">
@@ -30,10 +32,10 @@
 		<% end %>
 	</tbody>
 	</table>
-	
 </div>
 </div>
 </div>
+<% end %>
 
 
     <div class="modal fade" id="school_modal_container" tabindex="-1" role="dialog" aria-hidden="true">
