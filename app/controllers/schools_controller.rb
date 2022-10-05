@@ -18,6 +18,19 @@ class SchoolsController < ApplicationController
 		redirect_to schools_path
 	end
 
+	def edit
+		@school = School.find(params[:id])
+		respond_simple
+	end
+
+	def update
+		@school = School.find(params[:id])
+		@school.update(school_params)
+		 respond_to do |format|
+			format.html { redirect_to schools_path, notice: 'School information successfully Updated' }
+		 end
+	end
+
 	private
 
     def respond_simple
@@ -28,6 +41,6 @@ class SchoolsController < ApplicationController
     end
 
     def school_params
-		params.require(:school).permit(:school_name, :season_name, :user_id)
-	end
+			params.require(:school).permit(:school_name, :season_name, :user_id)
+		end
 end

@@ -118,6 +118,38 @@ module ApplicationHelper
 		
 	end
 
+	def all_sports_name
+		[
+			['Archery', 'Archery'],
+			['Baseball', 'Baseball'],
+			['Basketball', 'Basketball'],
+			['Bocce Ball', 'Bocce Ball'],
+			['Cheer', 'Cheer'],
+			['Crew', 'Crew'], 
+			['Cross Country', 'Cross Country'], 
+			['Dance', 'Dance'],
+			['Field Hockey', 'Field Hockey'],
+			['Football', 'Football'],
+			['Golf', 'Golf'],
+			['Gymnastics', 'Gymnastics'],
+			['Indoor Track', 'Indoor Track'],
+			['Lacrosse', 'Lacrosse'],
+			['Marching Band', 'Marching Band'],
+			['Middle School Basketball', 'Middle School Basketball'],
+			['Outdoor Track', 'Outdoor Track'], 
+			['POMS', 'POMS'], 
+			['Rugby', 'Rugby'],
+			['Soccer', 'Soccer'],
+			['Softball', 'Softball'],
+			['Swim', 'Swim'],
+			['Tennis', 'Tennis'],
+			['Unified Tennis', 'Unified Tennis'],
+			['VolleyBall', 'VolleyBall'],	
+			['Wrestling', 'Wrestling']  
+						
+		]
+	end
+
 
 
 end

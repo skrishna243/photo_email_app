@@ -1,5 +1,5 @@
 current directory: /Users/saikrishna/code/test_code/photo_email_app/vendor/bundle/ruby/2.7.0/gems/ffi-1.15.5/ext/ffi_c
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/bin/ruby -I /Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0 -r ./siteconf20220623-75274-8zc4k5.rb extconf.rb
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/bin/ruby -I /Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0 -r ./siteconf20221005-86329-3h79fv.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... no
 checking for ffi_prep_closure_loc() in -llibffi... no
 checking for ffi_prep_closure_loc() in -llibffi-8... no
@@ -124,4 +124,4 @@ compiling Types.c
 compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20220623-75274-14ro7sp
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20221005-86329-1dljhae

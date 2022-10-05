@@ -1,5 +1,5 @@
 current directory: /Users/saikrishna/code/test_code/photo_email_app/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.4/ext/mysql2
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/bin/ruby -I /Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0 -r ./siteconf20220623-75274-5x6ktu.rb extconf.rb
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/bin/ruby -I /Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0 -r ./siteconf20221005-86329-1qtq0om.rb extconf.rb
 /usr/local/bin/brew
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
@@ -26,7 +26,7 @@ checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... yes
 checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... yes
 checking for my_bool in mysql.h... no
 -----
-Setting rpath to /usr/local/Cellar/mysql/8.0.29/lib
+Setting rpath to /usr/local/Cellar/mysql/8.0.30/lib
 -----
 creating Makefile
 
@@ -45,4 +45,4 @@ ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 
 current directory: /Users/saikrishna/code/test_code/photo_email_app/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.4/ext/mysql2
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 mysql2.bundle ./.gem.20220623-75274-1b8ajmn/mysql2
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 mysql2.bundle ./.gem.20221005-86329-1lcyex6/mysql2

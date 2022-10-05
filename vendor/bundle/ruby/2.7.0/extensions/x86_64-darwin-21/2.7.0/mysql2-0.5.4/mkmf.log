@@ -137,7 +137,7 @@ checked program was:
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 Undefined symbols for architecture x86_64:
   "_rb_enc_interned_str", referenced from:
-      _t in conftest-14f0f0.o
+      _t in conftest-d5a74c.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -165,7 +165,7 @@ checked program was:
 
 have_header: checking for mysql.h... -------------------- yes
 
-"gcc -E -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe  conftest.c -o conftest.i"
+"gcc -E -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -177,7 +177,7 @@ checked program was:
 
 have_header: checking for errmsg.h... -------------------- yes
 
-"gcc -E -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe  conftest.c -o conftest.i"
+"gcc -E -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -189,7 +189,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_DISABLED in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -205,7 +205,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_PREFERRED in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -221,7 +221,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_REQUIRED in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -237,7 +237,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_VERIFY_CA in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -253,7 +253,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -269,7 +269,7 @@ checked program was:
 
 have_struct_member: checking for MYSQL.net.vio in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -288,12 +288,12 @@ checked program was:
 
 have_struct_member: checking for MYSQL.net.pvio in mysql.h... -------------------- no
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 conftest.c:6:35: error: no member named 'pvio' in 'struct NET'; did you mean 'vio'?
 int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
                                   ^~~~
                                   vio
-/usr/local/Cellar/mysql/8.0.29/include/mysql/mysql_com.h:911:13: note: 'vio' declared here
+/usr/local/Cellar/mysql/8.0.30/include/mysql/mysql_com.h:911:13: note: 'vio' declared here
   MYSQL_VIO vio;
             ^
 1 error generated.
@@ -315,7 +315,7 @@ checked program was:
 
 have_const: checking for MYSQL_DEFAULT_AUTH in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -331,7 +331,7 @@ checked program was:
 
 have_const: checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -347,7 +347,7 @@ checked program was:
 
 have_const: checking for SERVER_QUERY_NO_GOOD_INDEX_USED in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -363,7 +363,7 @@ checked program was:
 
 have_const: checking for SERVER_QUERY_NO_INDEX_USED in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -379,7 +379,7 @@ checked program was:
 
 have_const: checking for SERVER_QUERY_WAS_SLOW in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -395,7 +395,7 @@ checked program was:
 
 have_const: checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -411,7 +411,7 @@ checked program was:
 
 have_const: checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... -------------------- yes
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -427,7 +427,7 @@ checked program was:
 
 have_type: checking for my_bool in mysql.h... -------------------- no
 
-"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 conftest.c:6:9: error: unknown type name 'my_bool'
 typedef my_bool conftest_type;
         ^
@@ -445,44 +445,8 @@ checked program was:
 
 --------------------
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Weverything  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Weverything  "
 error: include location '/usr/local/include' is unsafe for cross-compilation [-Werror,-Wpoison-system-directories]
-In file included from conftest.c:1:
-In file included from /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby.h:33:
-In file included from /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:24:
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21/ruby/config.h:14:9: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-#define __EXTENSIONS__ 1
-        ^
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21/ruby/config.h:15:9: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-#define _ALL_SOURCE 1
-        ^
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21/ruby/config.h:16:9: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-#define _GNU_SOURCE 1
-        ^
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21/ruby/config.h:17:9: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-#define _POSIX_PTHREAD_SEMANTICS 1
-        ^
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21/ruby/config.h:18:9: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-#define _TANDEM_SOURCE 1
-        ^
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21/ruby/config.h:346:9: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-#define __STDC_WANT_LIB_EXT1__ 1
-        ^
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21/ruby/config.h:382:9: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-#define _REENTRANT 1
-        ^
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21/ruby/config.h:383:9: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-#define _THREAD_SAFE 1
-        ^
-In file included from conftest.c:1:
-In file included from /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby.h:33:
-In file included from /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:29:
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/defines.h:191:8: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-#undef __
-       ^
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/defines.h:193:10: error: macro name is a reserved identifier [-Werror,-Wreserved-id-macro]
-# define __(args) args
-         ^
 In file included from conftest.c:1:
 In file included from /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby.h:33:
 /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:876:5: error: signed shift result (0x80000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Werror,-Wshift-sign-overflow]
@@ -491,7 +455,7 @@ In file included from /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.
 /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:855:47: note: expanded from macro 'RUBY_FL_USER_N'
 #define RUBY_FL_USER_N(n) RUBY_FL_USER##n = (1<<(RUBY_FL_USHIFT+n))
                                              ~^ ~~~~~~~~~~~~~~~~~~
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:927:13: error: padding struct 'struct RObject::(anonymous at /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:925:2)' with 4 bytes to align 'ivptr' [-Werror,-Wpadded]
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:927:13: error: padding struct 'struct RObject::(unnamed at /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:925:2)' with 4 bytes to align 'ivptr' [-Werror,-Wpadded]
             VALUE *ivptr;
                    ^
 /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1386:9: error: disabled expansion of recursive macro [-Werror,-Wdisabled-macro-expansion]
@@ -542,6 +506,93 @@ In file included from /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.
 /Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:464:29: note: expanded from macro 'RUBY_Qtrue'
 #define RUBY_Qtrue  ((VALUE)RUBY_Qtrue)
                             ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1635:9: error: disabled expansion of recursive macro [-Werror,-Wdisabled-macro-expansion]
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:563:39: note: expanded from macro 'RB_TYPE_P'
+        ((type) == RUBY_T_FALSE) ? ((obj) == RUBY_Qfalse) : \
+                                             ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:463:29: note: expanded from macro 'RUBY_Qfalse'
+#define RUBY_Qfalse ((VALUE)RUBY_Qfalse)
+                            ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1635:9: error: disabled expansion of recursive macro [-Werror,-Wdisabled-macro-expansion]
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:564:37: note: expanded from macro 'RB_TYPE_P'
+        ((type) == RUBY_T_NIL) ? ((obj) == RUBY_Qnil) : \
+                                           ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:465:29: note: expanded from macro 'RUBY_Qnil'
+#define RUBY_Qnil   ((VALUE)RUBY_Qnil)
+                            ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1635:9: error: disabled expansion of recursive macro [-Werror,-Wdisabled-macro-expansion]
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:565:39: note: expanded from macro 'RB_TYPE_P'
+        ((type) == RUBY_T_UNDEF) ? ((obj) == RUBY_Qundef) : \
+                                             ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:466:29: note: expanded from macro 'RUBY_Qundef'
+#define RUBY_Qundef ((VALUE)RUBY_Qundef)        /* undefined value for placeholder */
+                            ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1635:9: error: disabled expansion of recursive macro [-Werror,-Wdisabled-macro-expansion]
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:566:30: note: expanded from macro 'RB_TYPE_P'
+        ((type) == RUBY_T_SYMBOL) ? RB_SYMBOL_P(obj) : \
+                                    ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:408:45: note: expanded from macro 'RB_SYMBOL_P'
+#define RB_SYMBOL_P(x) (RB_STATIC_SYM_P(x)||RB_DYNAMIC_SYM_P(x))
+                                            ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:407:31: note: expanded from macro 'RB_DYNAMIC_SYM_P'
+#define RB_DYNAMIC_SYM_P(x) (!RB_SPECIAL_CONST_P(x) && RB_BUILTIN_TYPE(x) == (RUBY_T_SYMBOL))
+                              ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1312:54: note: expanded from macro 'RB_SPECIAL_CONST_P'
+#define RB_SPECIAL_CONST_P(x) (RB_IMMEDIATE_P(x) || !RB_TEST(x))
+                                                     ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:479:44: note: expanded from macro 'RB_TEST'
+#define RB_TEST(v) !(((VALUE)(v) & (VALUE)~RUBY_Qnil) == 0)
+                                           ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:465:29: note: expanded from macro 'RUBY_Qnil'
+#define RUBY_Qnil   ((VALUE)RUBY_Qnil)
+                            ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1635:9: error: disabled expansion of recursive macro [-Werror,-Wdisabled-macro-expansion]
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:567:29: note: expanded from macro 'RB_TYPE_P'
+        ((type) == RUBY_T_FLOAT) ? RB_FLOAT_TYPE_P(obj) : \
+                                   ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:558:4: note: expanded from macro 'RB_FLOAT_TYPE_P'
+        (!RB_SPECIAL_CONST_P(obj) && RB_BUILTIN_TYPE(obj) == RUBY_T_FLOAT))
+          ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1312:54: note: expanded from macro 'RB_SPECIAL_CONST_P'
+#define RB_SPECIAL_CONST_P(x) (RB_IMMEDIATE_P(x) || !RB_TEST(x))
+                                                     ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:479:44: note: expanded from macro 'RB_TEST'
+#define RB_TEST(v) !(((VALUE)(v) & (VALUE)~RUBY_Qnil) == 0)
+                                           ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:465:29: note: expanded from macro 'RUBY_Qnil'
+#define RUBY_Qnil   ((VALUE)RUBY_Qnil)
+                            ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1635:9: error: disabled expansion of recursive macro [-Werror,-Wdisabled-macro-expansion]
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:568:4: note: expanded from macro 'RB_TYPE_P'
+        (!RB_SPECIAL_CONST_P(obj) && RB_BUILTIN_TYPE(obj) == (type)))
+          ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1312:54: note: expanded from macro 'RB_SPECIAL_CONST_P'
+#define RB_SPECIAL_CONST_P(x) (RB_IMMEDIATE_P(x) || !RB_TEST(x))
+                                                     ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:479:44: note: expanded from macro 'RB_TEST'
+#define RB_TEST(v) !(((VALUE)(v) & (VALUE)~RUBY_Qnil) == 0)
+                                           ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:465:29: note: expanded from macro 'RUBY_Qnil'
+#define RUBY_Qnil   ((VALUE)RUBY_Qnil)
+                            ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1807:49: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_method(VALUE,const char*,VALUE(*)(ANYARGS),int);
+                                                ^
+                                                        void
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1808:58: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_module_function(VALUE,const char*,VALUE(*)(ANYARGS),int);
+                                                         ^
+                                                                 void
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:1809:52: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_global_function(const char*,VALUE(*)(ANYARGS),int);
+                                                   ^
+                                                           void
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:2100:13: error: disabled expansion of recursive macro [-Werror,-Wdisabled-macro-expansion]
+        if (obj == RUBY_Qtrue)  return rb_cTrueClass;
+                   ^
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/ruby.h:464:29: note: expanded from macro 'RUBY_Qtrue'
+#define RUBY_Qtrue  ((VALUE)RUBY_Qtrue)
+                            ^
 fatal error: too many errors emitted, stopping now [-ferror-limit=]
 20 errors generated.
 checked program was:
@@ -551,7 +602,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-bad-function-cast  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-bad-function-cast  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -560,7 +611,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-conditional-uninitialized  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-conditional-uninitialized  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -569,7 +620,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-covered-switch-default  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-covered-switch-default  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -578,7 +629,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-declaration-after-statement  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-declaration-after-statement  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -587,7 +638,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-disabled-macro-expansion  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-disabled-macro-expansion  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -596,7 +647,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-documentation-unknown-command  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-documentation-unknown-command  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -605,7 +656,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-missing-field-initializers  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-missing-field-initializers  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -614,7 +665,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-missing-variable-declarations  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-missing-variable-declarations  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -623,7 +674,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-padded  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-padded  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -632,7 +683,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-reserved-id-macro  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-reserved-id-macro  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -641,7 +692,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-sign-conversion  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-sign-conversion  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -650,7 +701,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-static-in-inline  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-static-in-inline  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -659,7 +710,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-switch-enum  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-switch-enum  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -668,7 +719,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-undef  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-undef  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -677,7 +728,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-unreachable-code  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-unreachable-code  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -686,7 +737,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-used-but-marked-unused  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7 -Werror -Wno-used-but-marked-unused  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
@@ -695,7 +746,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.29/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.29/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7  -Wl,-rpath,/usr/local/Cellar/mysql/8.0.29/lib  "
+"gcc -o conftest -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/saikrishna/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0 -I. -I/usr/local/Cellar/mysql/8.0.30/include/mysql  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe -DFULL_SSL_MODE_SUPPORT -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused conftest.c  -L. -L/Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/openssl@3/lib    -L/usr/local/Cellar/mysql/8.0.30/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.2.7  -Wl,-rpath,/usr/local/Cellar/mysql/8.0.30/lib  "
 ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 checked program was:
 /* begin */
