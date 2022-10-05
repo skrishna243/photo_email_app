@@ -14,7 +14,7 @@
   <div class="card-header header-style"><h3>SCHOOL DETAILS</h3></div>
   <div class="card-body">
    <div class="table-responsive">
-	<table class="table table-bordered">
+	<table class="table table-bordered text-center">
 	<thead>
 		<th>School  Name</th>
 		<th>Season Name</th>
@@ -27,7 +27,9 @@
 				<td><%= (sch.school_name).upcase %></td>
 				<td><%= (sch.season_name).upcase %></td>
 				<td><%= date_formatted(sch.created_at)%></td>
-				<td> <%= link_to 'View', new_school_student_path(sch.id),  class: 'btn btn-success btn-xs' %></td>
+				<td> <%= link_to 'View', new_school_student_path(sch.id),  class: 'btn btn-success'  %> &nbsp;&nbsp;&nbsp;
+					<%= button_tag('Edit'.html_safe, class: 'btn btn-default  btn-edit-school', 'data-school-id': sch.id)%>
+				</td>
 			</tr>
 		<% end %>
 	</tbody>
@@ -54,8 +56,8 @@
 	function showNewSchoolModal() {
     $.ajax({
       url: 'schools/new',
-      success: function(new_prescriber_patient_body) {
-        $('#school_modal_container .modal-body').html(new_prescriber_patient_body);
+      success: function(new_school_body) {
+        $('#school_modal_container .modal-body').html(new_school_body);
         $('.modal').modal('hide');
         $('#school_modal_container').modal('show');
         $('#school_modal_container .modal-title').html('New School');
@@ -71,6 +73,23 @@
 
     $('#add_school').on('click', function() {
       showNewSchoolModal();
+    });
+
+    $('.btn-edit-school').on('click', function() {
+
+    	var school_id = $(this).data('school-id');
+    	$.ajax({
+        url: 'schools/' + school_id + '/edit',
+
+        success: function(edit_school_modal) {
+          $('#school_modal_container .modal-body').html(edit_school_modal);
+          $('.modal').modal('hide');
+          $('#school_modal_container').modal('show');
+          $('#school_modal_container .modal-title').html('Edit School');
+        }
+
+      });
+
     });
 
   })

@@ -1,5 +1,5 @@
 current directory: /Users/saikrishna/code/test_code/photo_email_app/vendor/bundle/ruby/2.7.0/gems/puma-5.6.4/ext/puma_http11
-/Users/saikrishna/.rvm/rubies/ruby-2.7.6/bin/ruby -I /Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0 -r ./siteconf20220623-85630-xzcz7q.rb extconf.rb
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/bin/ruby -I /Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0 -r ./siteconf20221005-86329-zrjw3z.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
@@ -24,4 +24,4 @@ linking shared-object puma/puma_http11.bundle
 
 current directory: /Users/saikrishna/code/test_code/photo_email_app/vendor/bundle/ruby/2.7.0/gems/puma-5.6.4/ext/puma_http11
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 puma_http11.bundle ./.gem.20220623-85630-x5814k/puma
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 puma_http11.bundle ./.gem.20221005-86329-6yzr6s/puma
