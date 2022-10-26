@@ -29,3 +29,4 @@ test:
 production:
   <<: *default
   database: photo_app_prod
+  url: <%= ENV['CLEARDB_DATABASE_URL']&.sub(/\Amysql/, 'mysql2') %>
