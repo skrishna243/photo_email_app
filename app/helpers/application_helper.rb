@@ -113,6 +113,8 @@ module ApplicationHelper
 			'JV'
 		when 2
 			'Varsity'
+		when 3
+			'CO-ED'
 		else 'N/A'
 		end	
 	end
