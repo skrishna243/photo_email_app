@@ -10,6 +10,17 @@ module ApplicationHelper
 
 	def team_name
 		[
+			['CO-ED', '3'],
+			['Freshman', '0'], 
+			['JV', '1'], 
+			['Varsity', '2']
+		]
+	end
+
+	def report_team_name
+		[
+			['All', 'All'],
+			['CO-ED', '3'],
 			['Freshman', '0'], 
 			['JV', '1'], 
 			['Varsity', '2']
@@ -19,6 +30,7 @@ module ApplicationHelper
 	def fall_sport_name
 		[
 			['None', 'None'],
+			['Band', 'Band'],
 			['Cheer', 'Cheer'], 
 			['Crew', 'Crew'], 
 			['Cross Country', 'Cross Country'], 
@@ -120,7 +132,9 @@ module ApplicationHelper
 
 	def all_sports_name
 		[
+			['All', 'All'],
 			['Archery', 'Archery'],
+			['Band', 'Band'],
 			['Baseball', 'Baseball'],
 			['Basketball', 'Basketball'],
 			['Bocce Ball', 'Bocce Ball'],

@@ -60,7 +60,7 @@
 		        		<%= label_tag 'Sport', 'Sport' %>
 		         </div>
 		         <div class="col-md-7">
-		        				<%= select_tag :sport_type, options_for_select(all_sports_name), { include_blank: '----- Select sport ------', class: 'form-control' , :required => true} %>
+		        				<%= select_tag :sport_type, options_for_select(all_sports_name), { include_blank: '----- Select Sport ------', class: 'form-control' , :required => true} %>
 		         </div>
 		       </div>
 		      </div>
@@ -70,7 +70,7 @@
 		        		<%= label_tag 'Team', 'Team' %><br>
 		          </div>
 		         <div class="col-md-7">
-		        <%= select_tag :team_type, options_for_select(team_name), { include_blank: '----- Select Team ------', class: 'form-control' , :required => true} %>
+		        <%= select_tag :team_type, options_for_select(report_team_name), { include_blank: '----- Select Team ------', class: 'form-control' , :required => true} %>
 		        </div>
 		      </div>
 		      </div>
