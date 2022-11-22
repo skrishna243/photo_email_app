@@ -16,7 +16,7 @@ class ReportsController < ApplicationController
 		   end
 
 		end
-		@source_company_names = School.where(user_id: current_user.id).pluck(:school_name).uniq
+		@school_names = School.where(user_id: current_user.id).pluck(:school_name).uniq
 	end
 
 end

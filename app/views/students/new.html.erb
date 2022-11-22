@@ -17,12 +17,27 @@
 				    <% end %>
 				 
 				</div>
-			 <div class="row">
+			 <!-- <div class="row">
 				  
-				    <%= f.label :team_type, 'Team' %><br>
-				    <%= f.select :team_type,options_for_select(team_name),  { include_blank: '----- Select Team ------'}, {class: ' form-control'} %>
-				 
+				    <%#= f.label :team_type, 'Team' %><br>
+				    <%#= f.select :team_type,options_for_select(team_name),  { include_blank: '----- Select Team ------'}, {class: ' form-control'} %>				 
+			 </div> -->
+			 <div class="row" style="margin-top: 10px;">
+			 			<label class= 'form-control'>
+			 				<%= f.radio_button :team_type, '2', class: 'text-center' %><%= f.label :team_type, ' Varsity', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+			 				<%= f.radio_button :team_type, '1', class: 'text-center' %> <%= f.label :team_type, 'JV', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+			 				<%= f.radio_button :team_type, '0', class: 'text-center' %><%= f.label :team_type, 'Freshman', class: 'text-center' %> &nbsp;&nbsp;&nbsp;
+			 			</label> 
 			 </div>
+
+			 <div class="row" style="margin-top: 10px;">
+			 			<label class= 'form-control'>
+			 				<%= f.radio_button :team_type, '4', class: 'text-center' %><%= f.label :team_type, 'Boys', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+			 				<%= f.radio_button :team_type, '5', class: 'text-center' %> <%= f.label :team_type, 'Girls', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+			 				<%= f.radio_button :team_type, '3', class: 'text-center' %><%= f.label :team_type, 'CO-ED', class: 'text-center' %> &nbsp;&nbsp;&nbsp;
+			 			</label> 
+			 </div>
+
 			 <div class="row">
 				  
 				    <%= f.label :student_name, 'Name' %><br>
