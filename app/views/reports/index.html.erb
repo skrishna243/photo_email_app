@@ -35,7 +35,7 @@
 	        		<%= label_tag 'school_name', 'School Name' %>
 	         </div>
 	         <div class="col-md-7">
-	        				<%= select_tag :school_name, options_for_select(@source_company_names, :selected => nil), { include_blank: '----- Select School ------', class: 'form-control' , :required => true} %>
+	        				<%= select_tag :school_name, options_for_select(@school_names, :selected => nil), { include_blank: '----- Select School ------', class: 'form-control' , :required => true} %>
 	         </div>
 	       </div>
 	      </div>

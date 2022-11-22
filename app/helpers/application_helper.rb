@@ -20,10 +20,13 @@ module ApplicationHelper
 	def report_team_name
 		[
 			['All', 'All'],
-			['CO-ED', '3'],
-			['Freshman', '0'], 
+			['Varsity', '2'],
 			['JV', '1'], 
-			['Varsity', '2']
+			['Freshman', '0'], 
+			['Boys', '4'],
+			['Girls', '5'],
+			['CO-ED', '3']
+			
 		]
 	end
 
@@ -69,7 +72,8 @@ module ApplicationHelper
 			['Indoor Track', 'Indoor Track'], 
 			['Marching Band', 'Marching Band'],
 			['Middle School Basketball', 'Middle School Basketball'],	
-			['Swim', 'Swim'],	
+			['Swim', 'Swim'],
+			['Trainers', 'Trainers'],	
 			['Wrestling', 'Wrestling'],
 			 	
 		]
@@ -159,6 +163,7 @@ module ApplicationHelper
 			['Softball', 'Softball'],
 			['Swim', 'Swim'],
 			['Tennis', 'Tennis'],
+			['Trainers', 'Trainers'],
 			['Unified Tennis', 'Unified Tennis'],
 			['VolleyBall', 'VolleyBall'],	
 			['Wrestling', 'Wrestling']  
