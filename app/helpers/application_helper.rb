@@ -119,6 +119,10 @@ module ApplicationHelper
 			'Varsity'
 		when 3
 			'CO-ED'
+		when 4
+			'Boys'
+		when 5
+			'Girls'
 		else 'N/A'
 		end	
 	end
