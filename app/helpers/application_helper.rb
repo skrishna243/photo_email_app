@@ -1,4 +1,20 @@
 module ApplicationHelper
+	def stu_gender_name(gender_type)
+		if gender_type.nil?
+			'N/A'
+		else
+			case gender_type.to_i
+			when 0
+				'Boys'
+			when 1
+				'Girls'
+			when 2
+				'CO-ED'
+			else 'N/A'
+			end
+		end
+	end
+
 	def school_name
 		[
 			['South Lakes High School', '0'], 
@@ -22,10 +38,10 @@ module ApplicationHelper
 			['All', 'All'],
 			['Varsity', '2'],
 			['JV', '1'], 
-			['Freshman', '0'], 
-			['Boys', '4'],
-			['Girls', '5'],
-			['CO-ED', '3']
+			['Freshman', '0'] 
+			# ['Boys', '4'],
+			# ['Girls', '5'],
+			# ['CO-ED', '3']
 			
 		]
 	end
