@@ -89,6 +89,7 @@ module ApplicationHelper
 			['Marching Band', 'Marching Band'],
 			['Middle School Basketball', 'Middle School Basketball'],
 			['Rifle', 'Rifle'],	
+			['Scholastic Bowl', 'Scholastic Bowl'],
 			['Swim', 'Swim'],
 			['Trainers', 'Trainers'],	
 			['Wrestling', 'Wrestling'],
@@ -134,12 +135,8 @@ module ApplicationHelper
 			'JV'
 		when 2
 			'Varsity'
-		when 3
-			'CO-ED'
-		when 4
-			'Boys'
-		when 5
-			'Girls'
+		when 6
+			'None'
 		else 'N/A'
 		end	
 	end
@@ -181,6 +178,7 @@ module ApplicationHelper
 			['POMS', 'POMS'],
 			['Rifle', 'Rifle'],	 
 			['Rugby', 'Rugby'],
+			['Scholastic Bowl', 'Scholastic Bowl'],
 			['Soccer', 'Soccer'],
 			['Softball', 'Softball'],
 			['Swim', 'Swim'],
