@@ -25,15 +25,16 @@
 			 <div class="row" style="margin-top: 10px;">
 			 			<label class= 'form-control'>
 			 				<%= f.radio_button :team_type, '2', class: 'text-center' %><%= f.label :team_type, ' Varsity', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-			 				<%= f.radio_button :team_type, '1', class: 'text-center' %> <%= f.label :team_type, 'JV', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+			 				<%= f.radio_button :team_type, '1', class: 'text-center' %><%= f.label :team_type, 'JV', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
 			 				<%= f.radio_button :team_type, '0', class: 'text-center' %><%= f.label :team_type, 'Freshman', class: 'text-center' %> &nbsp;&nbsp;&nbsp;
+			 				<%= f.radio_button :team_type, '6', class: 'text-center' %><%= f.label :team_type, 'None', class: 'text-center' %> &nbsp;&nbsp;&nbsp;
 			 			</label> 
 			 </div>
 
 			 <div class="row" style="margin-top: 10px;">
 			 			<label class= 'form-control'>
 			 				<%= f.radio_button :stu_gender, '0', class: 'text-center' %><%= f.label :team_type, 'Boys', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-			 				<%= f.radio_button :stu_gender, '1', class: 'text-center' %> <%= f.label :team_type, 'Girls', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+			 				<%= f.radio_button :stu_gender, '1', class: 'text-center' %><%= f.label :team_type, 'Girls', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
 			 				<%= f.radio_button :stu_gender, '2', class: 'text-center' %><%= f.label :team_type, 'CO-ED', class: 'text-center' %> &nbsp;&nbsp;&nbsp;
 			 			</label> 
 			 </div>
@@ -44,12 +45,12 @@
 				    <%= f.text_field :student_name, class: 'form-control', required: :true %>
 				  
 			 </div>
-			 <div class="row">
+			 <!-- <div class="row">
 				 
-				    <%= f.label :student_email, 'Email' %><br>
-				    <%= f.text_field :student_email, class: 'form-control', placeholder: 'Please enter your personal email' %>
+				    <%#= f.label :student_email, "Student's Email" %><br>
+				    <%#= f.text_field :student_email, class: 'form-control' %>
 				 
-			 </div>
+			 </div> -->
 			 <div class="row">
 				  
 				    <%= f.label :parent_email, "Parent's Email" %><br>
