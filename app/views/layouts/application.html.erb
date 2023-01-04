@@ -46,7 +46,11 @@
 
 
 <% flash.each do |type, msg| %>
-  <div class="alert alert-success text-center flash-panel" style="font-size: 30px;">
+  <!-- <div class="alert alert-success text-center flash-panel" style="font-size: 30px;">
+    <%#= msg %>
+  </div>
+  <br> -->
+   <div class="alert alert-<%=type%> text-center flash-panel" style="font-size: 30px;">
     <%= msg %>
   </div>
   <br>
