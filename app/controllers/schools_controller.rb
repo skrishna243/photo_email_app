@@ -25,10 +25,29 @@ class SchoolsController < ApplicationController
 
 	def update
 		@school = School.find(params[:id])
-		@school.update(school_params)
-		 respond_to do |format|
-			format.html { redirect_to schools_path, notice: 'School information successfully Updated' }
-		 end
+		# @student_search = Student.find_by_school_id(@school.id)
+		if @school.update(school_params)
+			flash[:success] = "School information successfully Updated"
+		else
+			flash[:danger] = "School informtion cannot update after event"
+		end
+			 redirect_to schools_path
+
+
+		# if @student_search.blank?
+		# 	@school.update(school_params)
+		# 	 # respond_to do |format|
+		# 	# 	format.html { redirect_to schools_path, notice: 'School information successfully Updated' }
+		# 	 # end
+		# 	 flash[:success] = "School information successfully Updated"
+		# 	 redirect_to schools_path
+		# else
+		# 	 # respond_to do |format|
+		# 	# 	format.html { redirect_to schools_path, alert: 'School informtion cannot update after event' }
+		# 	 # end
+		# 	 flash[:danger] = "School informtion cannot update after event"
+		# 	 redirect_to schools_path
+		# end
 	end
 
 	private

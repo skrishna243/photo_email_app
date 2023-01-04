@@ -15,9 +15,11 @@ class StudentsController < ApplicationController
 		@school = School.find(params[:school_id])
 		@student = @school.students.create(student_params)
 		if @student.save
-			redirect_to new_school_student_path, notice: "Have a Good Season!"
+			flash[:success] = "Have a Good Season!"
+			redirect_to new_school_student_path
 		else
-			redirect_to new_school_student_path, alert: "Player creation failed"
+			flash[:danger] = "Student creation failed!"
+			redirect_to new_school_student_path
 		end
 	end
 
