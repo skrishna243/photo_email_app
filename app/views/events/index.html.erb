@@ -1,0 +1,128 @@
+<div class="card">
+	<div class="card-header header-style"><h3>ADD EVENT</h3></div>
+	<div class="card-body">
+		<%= button_tag('New Event', class: 'btn btn-info btn-sm-block float-right fa fa-plus', id: 'add_event') %>
+		 <p>PLEASE USE THIS SECTION TO ADD NEW EVENT</p>
+	</div>
+</div>
+
+
+
+<br><br><br>
+
+<% unless @events.nil? || @events.empty? %>
+
+<div class="card">
+  <div class="card-header header-style"><h3>SCHOOL DETAILS</h3></div>
+  <div class="card-body">
+   <div class="table-responsive">
+	<table class="table table-bordered text-center" id = "events_table">
+		<thead>
+			<th>Event Name</th>
+			<th>Event Location</th>
+			<th>Added At</th>
+			<th>Actions</th>
+		</thead>
+		<tbody>
+			<% @events.each do |eve| %>
+				<tr>
+					<td><%= (eve.event_name).upcase %></td>
+					<td><%= (eve.event_location).upcase %></td>
+					<td><%= date_formatted(eve.created_at)%></td>
+					<td> <%= link_to 'View', new_event_event_member_path(eve.id),  class: 'btn btn-success'  %> &nbsp;&nbsp;&nbsp;
+						<%= button_tag('Edit'.html_safe, class: 'btn btn-default  btn-edit-event', 'data-event-id': eve.id)%>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+</div>
+</div>
+<% end %>
+
+
+<div class="modal fade" id="event_modal_container" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header"><h4 class="modal-title m0">New Event</h4></div>
+      <div class="modal-body"></div>	    
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"> </script> 
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"> </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"> </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"> </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"> </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"> </script>
+<script type="text/javascript" src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+
+<script type="text/javascript">
+	(function()
+
+		{
+		  if( window.localStorage )
+		  	// debugger;
+		  {
+		    if( !localStorage.getItem('firstLoad') )
+		    {
+		      localStorage['firstLoad'] = true;
+		      window.location.reload();
+		    }  
+		    else
+		      localStorage.removeItem('firstLoad');
+		  }
+		}
+	)();
+
+	function showNewEventModal() {
+    $.ajax({
+      url: 'events/new',
+      success: function(new_event_body) {
+        $('#event_modal_container .modal-body').html(new_event_body);
+        $('.modal').modal('hide');
+        $('#event_modal_container').modal('show');
+        $('#event_modal_container .modal-title').html('New Event');
+      }
+    });
+  }
+
+  $("#events_table").DataTable({
+		     searching: true,
+		});
+</script>	
+<script type="text/javascript">
+  $(document).ready(function(){
+    setTimeout(function(){
+    $('.flash-panel').fadeOut();
+    }, 2000);
+
+    $('#add_event').on('click', function() {
+      showNewEventModal();
+    });
+
+    $('.btn-edit-event').on('click', function() {
+
+    	var event_id = $(this).data('event-id');
+    	$.ajax({
+        url: 'events/' + event_id + '/edit',
+
+        success: function(edit_event_modal) {
+          $('#event_modal_container .modal-body').html(edit_event_modal);
+          $('.modal').modal('hide');
+          $('#event_modal_container').modal('show');
+          $('#event_modal_container .modal-title').html('Edit Event');
+        }
+
+      });
+
+    });
+
+  })
+</script>	

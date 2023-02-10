@@ -1,0 +1,59 @@
+<div lass="row align-items-center vh-100 " style="margin-top: 75px" >
+  <div class="col-5 mx-auto" id="test-class">
+	<div class="card shadow border">
+			<div class="card-header header-style">
+				<h2 class="text-center"><%= @event.event_name %> </h2>
+			</div>
+	<div class = "card-body d-flex flex-column align-items-center">
+				<%= form_with model: [@event, @event.event_members.build] do |f| %>
+			 
+				<div class="row">
+				    <%= f.label :student_name, 'Name' %><br>
+				    <%= f.text_field :student_name, class: 'form-control', placeholder: 'First, Last Name', required: :true %>		  
+			 </div>
+
+			 <div class="row">
+				    <%= f.label :student_email, "Email" %><br>
+				    <%= f.text_field :student_email, class: 'form-control', required: :true %>		 
+			 </div>
+			 <%= f.hidden_field :photographer_id,   value: current_user.id %>
+			 <%= f.hidden_field :event_id,   				value: @event.id %>
+			 <%= f.hidden_field :event_name,   		  value: @event.event_name %>
+			 <%= f.hidden_field :event_location,    value: @event.event_location %>
+			 <%= f.hidden_field :event_date,   			value: Date.current %>
+			 <br><br>
+
+			  <div class="d-grid gap-2 col-6 mx-auto">
+			    <%= f.button "Submit", type: "submit", :class=> "btn", :style=>  'background-color: #7fbde3; color: white;' %>
+			  </div>
+			<% end %>
+			
+
+	</div>
+</div>
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+
+	
+	
+  $(document).ready(function(){
+  	$("#footer").removeClass("footer");
+  	
+  	//  if($(window).width() < 767) {
+    // //     $('#test-class').addClass('col-5');
+    // // }else{
+    //     $('#test-class').removeClass('col-5');
+    //  }
+
+    setTimeout(function(){
+    	$('.flash-panel').fadeOut();
+    }, 2000);
+
+  })
+
+
+</script>

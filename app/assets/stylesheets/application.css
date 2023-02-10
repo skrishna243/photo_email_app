@@ -104,4 +104,13 @@
 /*.select:hover {
   background-color: dodgerblue;
 }*/
+.land-container {
+/*    max-width: 750px;*/
+    margin-top: 150px;
+/*    margin-left: 150px;*/
+}
+
+.btn-slo{
+    min-width: 200px;
+}
 

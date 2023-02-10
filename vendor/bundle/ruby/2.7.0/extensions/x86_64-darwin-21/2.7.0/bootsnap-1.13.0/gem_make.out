@@ -1,0 +1,16 @@
+current directory: /Users/saikrishna/code/test_code/photo_email_app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
+/Users/saikrishna/.rvm/rubies/ruby-2.7.6/bin/ruby -I /Users/saikrishna/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0 -r ./siteconf20230204-34841-dp53q3.rb extconf.rb
+creating Makefile
+
+current directory: /Users/saikrishna/code/test_code/photo_email_app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/saikrishna/code/test_code/photo_email_app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/saikrishna/code/test_code/photo_email_app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20230204-34841-dxh2wa/bootsnap

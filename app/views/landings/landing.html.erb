@@ -1,0 +1,23 @@
+<div class="land-container">
+<div class="text-center row jumbotron jumbotron-fluid">
+  <div class="col-md-4">
+		<%= link_to 'SPORTS', schools_path,  class: 'btn btn-primary btn-lg btn-slo'  %>
+    </div>
+  <div class="col-md-4">
+		<%= link_to 'EVENTS', events_path,  class: 'btn btn-primary btn-lg btn-slo'  %>
+    </div>
+    <div class="col-md-4">
+		<%= link_to 'SENIORS',landing_path, class: 'btn btn-primary btn-lg btn-slo'  %>
+    </div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  	 $("#footer").removeClass("footer");
+    setTimeout(function(){
+    $('.flash-panel').fadeOut();
+    }, 2000);
+   })
+</script>	
