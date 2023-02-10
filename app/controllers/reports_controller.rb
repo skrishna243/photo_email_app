@@ -19,4 +19,17 @@ class ReportsController < ApplicationController
 		@school_names = School.where(user_id: current_user.id).order('school_name asc').pluck(:school_name).uniq
 	end
 
+	def event_member
+		@event_names = Event.where(user_id: current_user.id).order('event_name asc').pluck(:event_name)
+		if params[:report_type] == '205'
+			@start_date          = Date.new( params[:dates_one]["date_from1(1i)"].to_i, params[:dates_one]["date_from1(2i)"].to_i, params[:dates_one]["date_from1(3i)"].to_i).to_date.beginning_of_day
+            @end_date            = Date.new( params[:dates_one]["date_to1(1i)"].to_i, params[:dates_one]["date_to1(2i)"].to_i, params[:dates_one]["date_to1(3i)"].to_i).to_date.end_of_day
+
+            @event_member_data = EventMember.where("event_date between ? and ? AND event_name = ?", @start_date, @end_date, params[:event_name] )
+            @event_data = Event.where("event_name = ?", params[:event_name])
+
+		end
+
+	end
+
 end
