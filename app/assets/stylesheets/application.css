@@ -111,6 +111,12 @@
 }
 
 .btn-slo{
-    min-width: 200px;
+    min-width: 250px;
+    background-color: #B6D9DF;
+/*    color: white;*/
+}
+
+.btn-slo:hover{
+    background-color: #a1bcc1;
 }
 
