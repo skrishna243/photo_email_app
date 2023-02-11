@@ -26,7 +26,6 @@ class ReportsController < ApplicationController
             @end_date            = Date.new( params[:dates_one]["date_to1(1i)"].to_i, params[:dates_one]["date_to1(2i)"].to_i, params[:dates_one]["date_to1(3i)"].to_i).to_date.end_of_day
 
             @event_member_data = EventMember.where("event_date between ? and ? AND event_name = ?", @start_date, @end_date, params[:event_name] )
-            @event_data = Event.where("event_name = ?", params[:event_name])
 
 		end
 

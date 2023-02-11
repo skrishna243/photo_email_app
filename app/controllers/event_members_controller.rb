@@ -18,6 +18,6 @@ class EventMembersController < ApplicationController
 
 	private
 		def event_member_params
-			params.require(:event_member).permit(:student_name, :student_email, :photographer_id, :event_name, :event_date, :event_id)
+			params.require(:event_member).permit(:student_name, :student_email, :photographer_id, :event_name, :event_date, :event_id, :event_location)
 		end
 end
