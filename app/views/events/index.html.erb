@@ -107,8 +107,8 @@
       showNewEventModal();
     });
 
-    $('.btn-edit-event').on('click', function() {
-
+    // $('.btn-edit-event').on('click', function() {
+    $(document).on('click','.btn-edit-event' , function() {
     	var event_id = $(this).data('event-id');
     	$.ajax({
         url: 'events/' + event_id + '/edit',
