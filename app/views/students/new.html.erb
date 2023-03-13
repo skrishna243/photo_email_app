@@ -23,20 +23,38 @@
 				    <%#= f.select :team_type,options_for_select(team_name),  { include_blank: '----- Select Team ------'}, {class: ' form-control'} %>				 
 			 </div> -->
 			 <div class="row" style="margin-top: 10px;">
-			 			<label class= 'form-control'>
-			 				<%= f.radio_button :team_type, '2', class: 'text-center' %><%= f.label :team_type, ' Varsity', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-			 				<%= f.radio_button :team_type, '1', class: 'text-center' %><%= f.label :team_type, 'JV', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-			 				<%= f.radio_button :team_type, '0', class: 'text-center' %><%= f.label :team_type, 'Freshman', class: 'text-center' %> &nbsp;&nbsp;&nbsp;
-			 				<%= f.radio_button :team_type, '6', class: 'text-center' %><%= f.label :team_type, 'None', class: 'text-center' %> &nbsp;&nbsp;&nbsp;
-			 			</label> 
+          <label class= 'form-control'> 
+		 				<%= f.radio_button :team_type, '2', class: 'text-center' %>
+		 				<label for ="student_team_type_2"> Varsity</label>&nbsp;&nbsp;&nbsp;
+		 				<%= f.radio_button :team_type, '1', class: 'text-center' %>
+		 				<label for ="student_team_type_1"> JV</label>&nbsp;&nbsp;&nbsp;
+		 				<%= f.radio_button :team_type, '0', class: 'text-center' %>
+		 				<label for ="student_team_type_0"> Freshman</label>&nbsp;&nbsp;&nbsp;
+		 				<%= f.radio_button :team_type, '6', class: 'text-center' %>
+		 				<label for ="student_team_type_6"> None</label>&nbsp;&nbsp;&nbsp;
+		 			</label> 		 				
 			 </div>
 
 			 <div class="row" style="margin-top: 10px;">
-			 			<label class= 'form-control'>
-			 				<%= f.radio_button :stu_gender, '0', class: 'text-center' %><%= f.label :team_type, 'Boys', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-			 				<%= f.radio_button :stu_gender, '1', class: 'text-center' %><%= f.label :team_type, 'Girls', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-			 				<%= f.radio_button :stu_gender, '2', class: 'text-center' %><%= f.label :team_type, 'CO-ED', class: 'text-center' %> &nbsp;&nbsp;&nbsp;
-			 			</label> 
+		 			<label class= 'form-control'>
+			 				<%= f.radio_button :position, '0', class: 'text-center' %>
+			 				<label for ="student_position_0">Athelete</label>&nbsp;&nbsp;&nbsp;
+			 				<%= f.radio_button :position, '2', class: 'text-center' %>
+			 				<label for ="student_position_2">Manager</label>&nbsp;&nbsp;&nbsp;
+			 				<%= f.radio_button :position, '1', class: 'text-center' %>
+			 				<label for ="student_position_1">Coach</label>&nbsp;&nbsp;&nbsp;
+		 			</label> 
+			 </div>
+
+			 <div class="row" style="margin-top: 10px;">
+		 			<label class= 'form-control'>
+		 				<%= f.radio_button :stu_gender, '0', class: 'text-center' %>
+		 				<label for ="student_stu_gender_0">Boys</label>&nbsp;&nbsp;&nbsp;
+		 				<%= f.radio_button :stu_gender, '1', class: 'text-center' %>
+		 				<label for ="student_stu_gender_1">Girls</label>&nbsp;&nbsp;&nbsp;
+		 				<%= f.radio_button :stu_gender, '2', class: 'text-center' %>
+		 				<label for ="student_stu_gender_2">CO-ED</label>&nbsp;&nbsp;&nbsp;
+		 			</label> 
 			 </div>
 
 			 <div class="row">
