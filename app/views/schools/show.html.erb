@@ -1,10 +1,10 @@
-	<% unless @student_school.nil? || @student_school.empty? %>
+	
 <div class="card">
 	<div class="card-header header-style">
-			<h4>REGISTERED PLAYERS DATA</h4>
-		</div>
+		<h4>REGISTERED PLAYERS DATA</h4>
+	</div>
+  <% unless @student_school.nil? || @student_school.empty? %>
 	<div class = "card-body">
-
 			<table id="student_table" class="table table-bordered">
 				<thead>
 					<tr>
@@ -29,6 +29,10 @@
 					<% end %>
 				</tbody>
 			</table>
+	<% else %>
+		<div class = "card-body">
+			<p>Currently there is no data to show.</p>
+		</div>
 	<% end %>
 
 	</div>
@@ -65,18 +69,22 @@
 		}
 	)();
 
-	var school_name = "<%= @student_school.last.school_name%>"
-	var file_name = "<%= @student_school.last.school_name%>" + "_Season_"+ "<%= @student_school.last.season_type%>" 
-	$("#student_table").DataTable({
-		dom: 'Bfrtip',
-		buttons:[
-					{
-					    	
-					    extend: 'excel',
-					    text: 'Export',
-					    title: school_name,
-					    filename: file_name
-					}
-		  		]
-		});
+	<% unless @student_school.nil? || @student_school.empty? %>
+		var school_name = "<%= @student_school.last.school_name%>" ;
+		var file_name = "<%= @student_school.last.school_name%>" + "_Season_"+ "<%= @student_school.last.season_type%>" ;
+	<% end %>
+
+		$("#student_table").DataTable({
+			dom: 'Bfrtip',
+			buttons:[
+						{
+						    	
+						    extend: 'excel',
+						    text: 'Export',
+						    title: school_name,
+						    filename: file_name
+						}
+			  		]
+			});
+	
 </script>
