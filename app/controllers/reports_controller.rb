@@ -17,7 +17,11 @@ class ReportsController < ApplicationController
 		   end
 
 		end	
-		@schools = School.order(updated_at: :desc).where(user_id: current_user.id)	
+		# byebug
+		@year = Time.now.year
+		@school_start_date = Date.new(@year, 01, 01).to_date.beginning_of_day
+		@school_end_date   = Date.new(@year, 12, 31).to_date.end_of_day
+		@schools = School.order(updated_at: :desc).where("created_at between ? and ? and user_id =?", @school_start_date, @school_end_date, current_user.id)	
 	end
 
 	def event_member
