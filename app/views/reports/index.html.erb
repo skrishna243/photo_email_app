@@ -8,7 +8,7 @@
 	<thead>
 		<th>School  Name</th>
 		<th>Season Name</th>
-		<th>Added At</th>
+		<th>Added On</th>
 		<th>Actions</th>
 	</thead>
 	<tbody>
@@ -16,7 +16,7 @@
 			<tr>
 				<td><%= (sch.school_name).upcase %></td>
 				<td><%= (sch.season_name).upcase %></td>
-				<td><%= date_formatted(sch.created_at)%></td>
+				<td><%= time_formatted(sch.created_at)%></td>
 				<td> <%= link_to 'View', school_path(sch.id),  class: 'btn btn-success'  %>
 				</td>
 			</tr>

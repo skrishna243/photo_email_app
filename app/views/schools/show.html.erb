@@ -5,6 +5,7 @@
 	</div>
   <% unless @student_school.nil? || @student_school.empty? %>
 	<div class = "card-body">
+		<div class="table-responsive">
 			<table id="student_table" class="table table-bordered">
 				<thead>
 					<tr>
@@ -15,6 +16,7 @@
 						<th>Team</th>
 						<th>Gender</th>
 						<th>Position</th>
+						<th>Added on</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -27,6 +29,7 @@
 							<td><%= tm_name(stu.team_type).html_safe  %></td>
 							<td><%= stu_gender_name(stu.stu_gender).html_safe %></td>
 							<td><%= position_type(stu.position).html_safe %></td>
+							<td><%= time_formatted(stu.created_at)%></td>
 						</tr>
 					<% end %>
 				</tbody>
@@ -36,7 +39,7 @@
 			<p>Currently there is no data to show.</p>
 		</div>
 	<% end %>
-
+	</div>
 	</div>
 </div>
 

@@ -76,7 +76,8 @@ module ApplicationHelper
 			['Soccer', 'Soccer'],
 			['Softball', 'Softball'],
 			['Tennis', 'Tennis'],
-			['VolleyBall', 'VolleyBall']	 	
+			['VolleyBall', 'VolleyBall'],
+			['Other', 'Other']	 	
 		]
 	end
 
@@ -207,6 +208,10 @@ module ApplicationHelper
 			else 'N/A'
 			end
 		end
+	end
+
+	def time_formatted(date)
+	    date.present? ? date.strftime('%m/%d/%Y') : ''
 	end
 
 

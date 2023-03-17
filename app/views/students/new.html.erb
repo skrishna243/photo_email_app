@@ -14,9 +14,9 @@
 				    	<%= f.select :type_of_sport, options_for_select(spring_sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-control'} %>
 				    <% else %>
 				    	<%= f.select :type_of_sport, options_for_select(winter_sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-control'} %>
-				    <% end %>
-				 
+				    <% end %>   
 				</div>
+				<%= f.text_field :type_of_sport, id:"hidden_sport_name", class: 'form-control row', placeholder:"Enter sport name" %>
 			 <!-- <div class="row">
 				  
 				    <%#= f.label :team_type, 'Team' %><br>
@@ -25,35 +25,35 @@
 			 <div class="row" style="margin-top: 10px;">
           <label class= 'form-control'> 
 		 				<%= f.radio_button :team_type, '2', class: 'text-center' %>
-		 				<label for ="student_team_type_2"> Varsity</label>&nbsp;&nbsp;&nbsp;
+		 				<label for ="student_team_type_2"> Varsity</label>&nbsp;
 		 				<%= f.radio_button :team_type, '1', class: 'text-center' %>
-		 				<label for ="student_team_type_1"> JV</label>&nbsp;&nbsp;&nbsp;
+		 				<label for ="student_team_type_1"> JV</label>&nbsp;
 		 				<%= f.radio_button :team_type, '0', class: 'text-center' %>
-		 				<label for ="student_team_type_0"> Freshman</label>&nbsp;&nbsp;&nbsp;
+		 				<label for ="student_team_type_0"> Freshman</label>&nbsp;
 		 				<%= f.radio_button :team_type, '6', class: 'text-center' %>
-		 				<label for ="student_team_type_6"> None</label>&nbsp;&nbsp;&nbsp;
+		 				<label for ="student_team_type_6"> None</label>
 		 			</label> 		 				
 			 </div>
 
 			 <div class="row" style="margin-top: 10px;">
 		 			<label class= 'form-control'>
 			 				<%= f.radio_button :position, '0', class: 'text-center' %>
-			 				<label for ="student_position_0">Athelete</label>&nbsp;&nbsp;&nbsp;
+			 				<label for ="student_position_0">Athelete</label>&nbsp;
 			 				<%= f.radio_button :position, '2', class: 'text-center' %>
-			 				<label for ="student_position_2">Manager</label>&nbsp;&nbsp;&nbsp;
+			 				<label for ="student_position_2">Manager</label>&nbsp;
 			 				<%= f.radio_button :position, '1', class: 'text-center' %>
-			 				<label for ="student_position_1">Coach</label>&nbsp;&nbsp;&nbsp;
+			 				<label for ="student_position_1">Coach</label>&nbsp;
 		 			</label> 
 			 </div>
 
 			 <div class="row" style="margin-top: 10px;">
 		 			<label class= 'form-control'>
 		 				<%= f.radio_button :stu_gender, '0', class: 'text-center' %>
-		 				<label for ="student_stu_gender_0">Boys</label>&nbsp;&nbsp;&nbsp;
+		 				<label for ="student_stu_gender_0">Boys</label>&nbsp;
 		 				<%= f.radio_button :stu_gender, '1', class: 'text-center' %>
-		 				<label for ="student_stu_gender_1">Girls</label>&nbsp;&nbsp;&nbsp;
+		 				<label for ="student_stu_gender_1">Girls</label>&nbsp;
 		 				<%= f.radio_button :stu_gender, '2', class: 'text-center' %>
-		 				<label for ="student_stu_gender_2">CO-ED</label>&nbsp;&nbsp;&nbsp;
+		 				<label for ="student_stu_gender_2">CO-ED</label>&nbsp;
 		 			</label> 
 			 </div>
 
@@ -110,6 +110,16 @@
     setTimeout(function(){
     	$('.flash-panel').fadeOut();
     }, 2000);
+
+    	$('#hidden_sport_name').hide();
+    $('#student_type_of_sport').change(function(){
+    		var selectedsport = $(this).children("option:selected").val();
+    		if(selectedsport == "Other"){
+    			$('#hidden_sport_name').show();
+    		}else{
+    			$('#hidden_sport_name').hide();
+    		}
+    });
 
   })
 
