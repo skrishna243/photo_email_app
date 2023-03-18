@@ -60,7 +60,8 @@ module ApplicationHelper
 			['Soccer', 'Soccer'], 
 			['Tennis', 'Tennis'], 
 			['Unified Tennis', 'Unified Tennis'],
-			['VolleyBall', 'VolleyBall']
+			['VolleyBall', 'VolleyBall'],
+			['Other', 'Other']
 		]
 	end
 
@@ -96,6 +97,7 @@ module ApplicationHelper
 			['Swim', 'Swim'],
 			['Trainers', 'Trainers'],	
 			['Wrestling', 'Wrestling'],
+			['Other', 'Other']
 			 	
 		]
 	end
