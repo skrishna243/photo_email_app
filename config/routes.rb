@@ -17,6 +17,24 @@ resources :events do
   resources :event_members 
 end
 
+resources :senior_schools do
+  
+    member do 
+       get  :upload_senior_student_data
+    end
+    collection do
+      post :import_student_data
+    end
+
+    resources :senior_students do
+      collection do
+        get :student_search
+        get :check_in
+        get :check_out
+      end
+    end
+end
+
 resources :reports do
   collection do
       get :event_member

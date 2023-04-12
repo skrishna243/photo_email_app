@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header header-style"><h3> <%= @senior_school_name.school_name %> Students Check In/Out </h3></div>
+  <div class="card-body">
+  	<label for="bar_code_scanned">Scanned Student Id:</label>
+  	<input type="text" id="bar_code_scanned" name="bar_code_scanned" autofocus>
+  </div>
+</div>
+<br><br>
+
+
+<div class="row align-items-center" id='qrcode-modal-patient-profile-result'>
+        <%#= render partial: 'senior_students/stdent_search', locals: {stu_result: nil} %>
+ </div>
+
+
+
+<script type="text/javascript" src="https://s3.amazonaws.com/download.dymo.com/dymo/Software/JavaScript/dymo.connect.framework.js"></script>
+<script type="text/javascript">
+   setTimeout(function(){
+    	$('.flash-panel').fadeOut();
+    }, 3000);
+
+	 $(document).ready(function () {
+	 	 $("#footer").removeClass("footer");	
+	 	 
+	 	 
+			$("#bar_code_scanned").change(function(){
+				 var bar_code_scanned_value = $('#bar_code_scanned').val();
+			    $.ajax({
+	                 url: 'senior_students/student_search',
+	                 type: 'GET',
+	                 data: {qr_scanned_val: bar_code_scanned_value},
+	                 success: function(res) {
+	                 },
+	                 error: function(e) { console.log(e) }
+	              });
+	  	});
+
+
+	});
+</script>

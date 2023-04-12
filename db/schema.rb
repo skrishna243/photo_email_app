@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_10_225419) do
+ActiveRecord::Schema.define(version: 2023_04_11_203055) do
 
   create_table "event_members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "student_name"
@@ -40,6 +40,55 @@ ActiveRecord::Schema.define(version: 2023_02_10_225419) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "senior_schools", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "school_name"
+    t.string "season_name"
+    t.string "session_name"
+    t.integer "photographer_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "senior_student_checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "school_id"
+    t.integer "photographer_user_id"
+    t.integer "senior_student_id"
+    t.integer "internal_student_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "subject_id"
+    t.string "phone_number"
+    t.string "email"
+    t.string "check_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "full_name"
+    t.string "session_type"
+  end
+
+  create_table "senior_students", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "school_id"
+    t.integer "photographer_user_id"
+    t.integer "internal_student_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "online_code"
+    t.string "subject_id"
+    t.string "phone_number"
+    t.string "email"
+    t.text "notes"
+    t.string "content_type"
+    t.string "organiztion"
+    t.integer "reference_number"
+    t.string "year"
+    t.string "grade"
+    t.string "group"
+    t.text "image_name"
+    t.string "yearbook_selection"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "students", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "student_name"
     t.string "student_email"
@@ -56,6 +105,7 @@ ActiveRecord::Schema.define(version: 2023_02_10_225419) do
     t.date "event_date"
     t.string "gender"
     t.string "stu_gender"
+    t.string "position"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
