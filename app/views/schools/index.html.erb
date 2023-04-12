@@ -106,7 +106,10 @@
       showNewSchoolModal();
     });
 
-    $(document).on('click','.btn-edit-school' , function() {
+
+    // $('.btn-edit-school').on('click', function() {
+
+   $(document).on('click','.btn-edit-school' , function() {
     	var school_id = $(this).data('school-id');
     	$.ajax({
         url: 'schools/' + school_id + '/edit',
