@@ -1,5 +1,5 @@
 <div lass="row align-items-center vh-100">
-  <div class="col-6 mx-auto">
+  <div class="col-6 mx-auto" id="test-class">
     <div class="card shadow border">
       <div class="card-header header-style"><h2 class="d-flex justify-content-center" >Forgot your password?</h2></div>
         <div class="card-body d-flex flex-column align-items-center">
@@ -24,6 +24,11 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
+    if($(window).width() > 767) {
+        $('#test-class').addClass('col-6');
+    }else{
+        $('#test-class').removeClass('col-6');
+    }
     setTimeout(function(){
     $('.flash-panel').fadeOut();
     }, 2000);

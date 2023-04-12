@@ -60,7 +60,8 @@ module ApplicationHelper
 			['Soccer', 'Soccer'], 
 			['Tennis', 'Tennis'], 
 			['Unified Tennis', 'Unified Tennis'],
-			['VolleyBall', 'VolleyBall']
+			['VolleyBall', 'VolleyBall'],
+			['Other', 'Other']
 		]
 	end
 
@@ -69,12 +70,15 @@ module ApplicationHelper
 			['Archery', 'Archery'],
 			['Baseball', 'Baseball'],
 			['Crew', 'Crew'],
+			['Gymnastics', 'Gymnastics'],
 			['Lacrosse', 'Lacrosse'],
 			['Outdoor Track', 'Outdoor Track'], 
 			['Rugby', 'Rugby'],
 			['Soccer', 'Soccer'],
 			['Softball', 'Softball'],
-			['Tennis', 'Tennis']	 	
+			['Tennis', 'Tennis'],
+			['VolleyBall', 'VolleyBall'],
+			['Other', 'Other']	 	
 		]
 	end
 
@@ -93,6 +97,7 @@ module ApplicationHelper
 			['Swim', 'Swim'],
 			['Trainers', 'Trainers'],	
 			['Wrestling', 'Wrestling'],
+			['Other', 'Other']
 			 	
 		]
 	end
@@ -189,6 +194,26 @@ module ApplicationHelper
 			['Wrestling', 'Wrestling']  
 						
 		]
+	end
+
+	def position_type(position)
+		if position.nil?
+			'N/A'
+		else
+			case position.to_i
+			when 0
+				'Athelete'
+			when 1
+				'Coach'
+			when 2
+				'Manager'
+			else 'N/A'
+			end
+		end
+	end
+
+	def time_formatted(date)
+	    date.present? ? date.strftime('%m/%d/%Y') : ''
 	end
 
 

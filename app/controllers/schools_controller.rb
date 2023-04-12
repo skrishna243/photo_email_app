@@ -50,6 +50,11 @@ class SchoolsController < ApplicationController
 		# end
 	end
 
+	def show
+		@school = School.find(params[:id])
+		@student_school = Student.where(school_id: params[:id])
+	end
+
 	private
 
     def respond_simple

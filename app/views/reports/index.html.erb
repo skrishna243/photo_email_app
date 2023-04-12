@@ -1,3 +1,35 @@
+<% unless @schools.nil? || @schools.empty? %>
+
+<div class="card">
+  <div class="card-header header-style"><h3>SCHOOL SEARCH</h3></div>
+  <div class="card-body">
+   <div class="table-responsive">
+	<table class="table table-bordered text-center" id = "schools_table">
+	<thead>
+		<th>School  Name</th>
+		<th>Season Name</th>
+		<th>Added On</th>
+		<th>Actions</th>
+	</thead>
+	<tbody>
+		<% @schools.each do |sch| %>
+			<tr>
+				<td><%= (sch.school_name).upcase %></td>
+				<td><%= (sch.season_name).upcase %></td>
+				<td><%= time_formatted(sch.created_at)%></td>
+				<td> <%= link_to 'View', school_path(sch.id),  class: 'btn btn-success'  %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+	</table>
+</div>
+</div>
+</div>
+<% end %>
+<br><br>
+
+
 <div class="card">
 	<div class="card-header header-style">
 			<h4>PLAYER SEARCH</h4>
@@ -94,7 +126,7 @@
 			<h4>PLAYER SEARCH RESULT</h4>
 		</div>
 	<div class = "card-body">
-
+		<div class="table-responsive">
 			<table id="providerbillingReport" class="table table-bordered">
 				<thead>
 					<tr>
@@ -105,6 +137,7 @@
 						<th>Sport</th>
 						<th>Team</th>
 						<th>Gender</th>
+						<th>Position</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -117,10 +150,12 @@
 							<td><%= stu.type_of_sport  %></td>
 							<td><%= tm_name(stu.team_type).html_safe  %></td>
 							<td><%= stu_gender_name(stu.stu_gender).html_safe %></td>
+							<td><%= position_type(stu.position).html_safe %></td>
 						</tr>
 					<% end %>
 				</tbody>
 			</table>
+		</div>
 	<% end %>
 
 	</div>
@@ -157,7 +192,9 @@
 		  }
 		}
 	)();
-	// debugger;
+	$("#schools_table").DataTable({ 
+			"order": [[ 2, 'desc' ]]
+	});
 	urlParams 					 = new URLSearchParams(window.location.search);
 
 	var year  = urlParams.get('dates_one[date_from1(1i)]')
@@ -194,6 +231,6 @@ $.extend($.fn.dataTable.defaults, {
   $(document).ready(function(){
     setTimeout(function(){
     $('.flash-panel').fadeOut();
-    }, 2000);
+    }, 2000);  
   })
 </script>

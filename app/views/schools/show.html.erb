@@ -1,0 +1,95 @@
+	
+<div class="card">
+	<div class="card-header header-style">
+		<h4>REGISTERED PLAYERS DATA</h4>
+	</div>
+  <% unless @student_school.nil? || @student_school.empty? %>
+	<div class = "card-body">
+		<div class="table-responsive">
+			<table id="student_table" class="table table-bordered">
+				<thead>
+					<tr>
+						<th>School  Name</th>
+						<th>Student Name</th>
+						<th>Parent  Email</th>
+						<th>Sport</th>
+						<th>Team</th>
+						<th>Gender</th>
+						<th>Position</th>
+						<th>Added on</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @student_school.each do |stu| %>
+						<tr>
+							<td><%= stu.school_name  %></td>
+							<td><%= stu.student_name %></td>
+							<td><%= stu.parent_email %></td>
+							<td><%= stu.type_of_sport  %></td>
+							<td><%= tm_name(stu.team_type).html_safe  %></td>
+							<td><%= stu_gender_name(stu.stu_gender).html_safe %></td>
+							<td><%= position_type(stu.position).html_safe %></td>
+							<td><%= time_formatted(stu.created_at)%></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+	<% else %>
+		<div class = "card-body">
+			<p>Currently there is no data to show.</p>
+		</div>
+	<% end %>
+	</div>
+	</div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"> </script> 
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"> </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"> </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"> </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"> </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"> </script>
+<script type="text/javascript" src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+
+<script type="text/javascript">
+	(function()
+
+		{
+		  if( window.localStorage )
+		  	// debugger;
+		  {
+		    if( !localStorage.getItem('firstLoad') )
+		    {
+		      localStorage['firstLoad'] = true;
+		      window.location.reload();
+		    }  
+		    else
+		      localStorage.removeItem('firstLoad');
+		  }
+		}
+	)();
+
+	<% unless @student_school.nil? || @student_school.empty? %>
+		var school_name = "<%= @student_school.last.school_name%>" ;
+		var file_name = "<%= @student_school.last.school_name%>" + "_Season_"+ "<%= @student_school.last.season_type%>" ;
+	<% end %>
+
+		$("#student_table").DataTable({
+			dom: 'Bfrtip',
+			buttons:[
+						{
+						    	
+						    extend: 'excel',
+						    text: 'Export',
+						    title: school_name,
+						    filename: file_name
+						}
+			  		]
+			});
+	
+</script>
