@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_11_040015) do
+
+ActiveRecord::Schema.define(version: 2023_04_11_203055) do
+
 
   create_table "event_members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "student_name"
@@ -48,6 +50,25 @@ ActiveRecord::Schema.define(version: 2023_03_11_040015) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
+
+  create_table "senior_student_checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "school_id"
+    t.integer "photographer_user_id"
+    t.integer "senior_student_id"
+    t.integer "internal_student_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "subject_id"
+    t.string "phone_number"
+    t.string "email"
+    t.string "check_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "full_name"
+    t.string "session_type"
+  end
+
 
   create_table "senior_students", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "school_id"

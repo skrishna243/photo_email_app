@@ -1,0 +1,10 @@
+
+<% if @senior_student_check.present? %>
+$("#qrcode-modal-patient-profile-result").html("<%= j render partial: 'senior_students/stdent_search', locals: {stu_check_result: @senior_student_check, stu_result: nil} %>");
+$("#check_in").attr("disabled","disabled")
+<% elsif @senior_student_check.nil? && @stu_result.present? %>
+$("#qrcode-modal-patient-profile-result").html("<%= j render partial: 'senior_students/stdent_search', locals: {stu_result: @stu_result, stu_check_result: nil} %>");
+$("#check_out").attr("disabled","disabled")
+<% else %>
+$("#qrcode-modal-patient-profile-result").html("<%= j render partial: 'senior_students/stdent_search', locals: {stu_result: nil, stu_check_result: nil} %>");
+<% end %>

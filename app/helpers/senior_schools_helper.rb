@@ -1,0 +1,2 @@
+module SeniorSchoolsHelper
+end
