@@ -35,6 +35,7 @@ class SeniorSchoolsController < ApplicationController
 	end
 
 	def import_student_data
+
 		file = params[:file]
 		return redirect_to senior_schools_path, notice: "Only CSV Files" unless file.content_type = "text/csv"
 		file = File.open(file)
@@ -43,23 +44,55 @@ class SeniorSchoolsController < ApplicationController
 				student_hash = {}
 				student_hash[:school_id] = params[:school_id]
 				student_hash[:photographer_user_id] = current_user.id
-				student_hash[:internal_student_id] = row["Internal ID"]
-				student_hash[:first_name] = row["First Name"]
-				student_hash[:last_name] = row["Last Name"]
-				student_hash[:online_code] = row["Online Code"]
-				student_hash[:subject_id] = row["Subject ID"]
-				student_hash[:phone_number] = row["Phone 1"]
-				student_hash[:email] = row["Email(s)"]
-				student_hash[:notes] = row["Notes"]
-				student_hash[:content_type] = row["Type"]
-				student_hash[:organiztion] = row["Organization"]
-				student_hash[:reference_number] = row["Reference Number"]
-				student_hash[:year] = row["Year"]
-				student_hash[:grade] = row["Grade"]
-				student_hash[:group] = row["Groups"]
-				student_hash[:image_name] = row["Images"]
-				student_hash[:yearbook_selection] = row["Yearbook Selection 1"]
-		# byebug
+				if row["Internal ID"].present?
+					student_hash[:internal_student_id] = row["Internal ID"]
+				end
+				if row["First Name"].present?
+					student_hash[:first_name] = row["First Name"]
+				end
+				if row["Last Name"].present?
+					student_hash[:last_name] = row["Last Name"]
+				end
+				if row["Online Code"].present?
+					student_hash[:online_code] = row["Online Code"]
+				end
+				if row["Subject ID"].present?
+					student_hash[:subject_id] = row["Subject ID"]
+				end
+				if row["Phone 1"].present?
+					student_hash[:phone_number] = row["Phone 1"]
+				end
+				if row["Email(s)"].present?
+					student_hash[:email] = row["Email(s)"]
+				end
+				if row["Notes"].present?
+					student_hash[:notes] = row["Notes"]
+				end
+				if row["Type"].present?
+					student_hash[:content_type] = row["Type"]
+				end
+				if row["Organization"].present?
+					student_hash[:organiztion] = row["Organization"]
+				end
+				if row["Reference Number"].present?
+					student_hash[:reference_number] = row["Reference Number"]
+				end
+				if row["Year"].present?
+					student_hash[:year] = row["Year"]
+				end
+				if row["Grade"].present?
+					student_hash[:grade] = row["Grade"]
+				end
+				if row["Groups"].present?
+					student_hash[:group] = row["Groups"]
+				end
+				if row["Images"].present?
+					student_hash[:image_name] = row["Images"]
+				end
+				if row["Yearbook Selection 1"].present?
+					student_hash[:yearbook_selection] = row["Yearbook Selection 1"]
+				end
+
 
 				@existing_student = SeniorStudent.where(school_id: student_hash[:school_id], internal_student_id: student_hash[:internal_student_id])
 				
