@@ -1,7 +1,10 @@
 class SeniorStudentsController < ApplicationController
 	def index
 		@senior_school_name = SeniorSchool.find(params[:senior_school_id])
-		@senior_students = SeniorStudent.where(school_id: params[:senior_school_id])
+		# @senior_students = SeniorStudent.where(school_id: params[:senior_school_id])
+		@senior_check_results = SeniorStudentCheck.where(school_id: params[:senior_school_id]).order(created_at: :desc)
+		@senior_check_in_count = SeniorStudentCheck.where(school_id: params[:senior_school_id], check_type: 1)
+		@senior_check_out_count = SeniorStudentCheck.where(school_id: params[:senior_school_id], check_type: 2)
 	end
 
 	def student_search
@@ -15,7 +18,7 @@ class SeniorStudentsController < ApplicationController
 	def check_in
 		if params[:student_id].present?
 			@senior_student_check = SeniorStudentCheck.create(school_id: params[:senior_school_id], photographer_user_id: current_user.id, senior_student_id: params[:senior_student_id], internal_student_id: params[:student_id], first_name: params[:first_name], last_name: params[:last_name],
-									subject_id: params[:student_subject_id], email: params[:student_email], check_type: 1, full_name: params[:student_full_name], session_type: params[:session_type] )
+									subject_id: params[:student_subject_id], email: params[:student_email], check_type: 1, full_name: params[:student_full_name], session_type: params[:session_type], student_online_id: params[:student_online_id] )
 			# redirect_to senior_school_senior_students_url(params[:senior_school_id], message:"success")
 			if @senior_student_check.persisted?
 				flash[:success] = "Student successfully Checked In"

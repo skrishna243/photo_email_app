@@ -36,6 +36,17 @@ class ReportsController < ApplicationController
 
 	end
 
+	def senior_student_report
+
+		@senior_schools = SeniorSchool.all.order(updated_at: :desc)
+		if params[:report_type] == '206'
+			@start_date          	= Date.new( params[:event_date]["date_from1(1i)"].to_i, params[:event_date]["date_from1(2i)"].to_i, params[:event_date]["date_from1(3i)"].to_i).to_date.beginning_of_day
+			 @end_date             = Date.new( params[:event_date]["date_from1(1i)"].to_i, params[:event_date]["date_from1(2i)"].to_i, params[:event_date]["date_from1(3i)"].to_i).to_date.end_of_day
+			@senior_student_school  = SeniorStudentCheck.where("created_at between ? and ? AND school_id = ?",@start_date, @end_date, params[:school_name] )
+			
+		end
+	end
+
 private
 
 	def set_school_names

@@ -216,6 +216,38 @@ module ApplicationHelper
 	    date.present? ? date.strftime('%m/%d/%Y') : ''
 	end
 
+	def stu_check_name(full_name)
+		if full_name.nil?
+			'N/A'
+		else
+			full_name.upcase			
+		end
+	end
+
+	def session_type(session_type)
+		if session_type.nil?
+			'N/A'
+		else
+			case session_type.to_i
+			when 0
+				'DX'
+			when 1
+				'ST'
+			when 2
+				'YB'
+			when 3
+				'RT'
+			when 4
+				'UG'
+			else 'N/A'
+			end
+		end
+	end
+
+	def datetime_formatted(date)
+		date.present? ? date.strftime('%m/%d, %T') : ''
+	end
+
 
 
 end

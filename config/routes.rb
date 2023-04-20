@@ -39,6 +39,9 @@ resources :reports do
   collection do
       get :event_member
   end
+  collection do
+      get :senior_student_report
+  end
 end
 
 end
