@@ -1,6 +1,6 @@
-<% if stu_check_result.nil?  %>
-<div class="col-6">
-        <div class="card">
+<% if stu_check_result.nil? && stu_result.present?  %>
+        <div class="card" style="max-height:450px;overflow:auto;">
+            <br>
         	<div class="card-body align-items-center">
                 <div class="form-group form-inline">
                     <%= label_tag  "name", "Name:", class: "col-md-3" %>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "online_id", "Online ID:", class: "col-md-3" %>
-                    <%= text_field_tag :subject_id, stu_result.subject_id, size: "30", class: "form-control", :readonly => true%>
+                    <%= text_field_tag :student_online_id, stu_result.online_code, size: "30", class: "form-control", :readonly => true%>
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
@@ -26,21 +26,22 @@
                     <input type="radio" id="session_type_3" name="session_type" value="3" ><%= label_tag :session_type_3, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_4" name="session_type" value="4"><%= label_tag :session_type_4, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                         
-                </div>
+                </div><br>
                 <div class='sessionValidation form-group form-inline' style="color:red;"></div>
                 <%= hidden_field_tag :first_name, stu_result.first_name %>
                 <%= hidden_field_tag :last_name, stu_result.last_name %>
                 <%= hidden_field_tag :senior_student_id, stu_result.id%>
-              <br>
+                <%= hidden_field_tag :subject_id, stu_result.subject_id%>
+              <!-- <br> -->
                     <button type="submit" class="btn btn-xs btn-success mr-5 "data-student-id="<%= stu_result.internal_student_id %>" id = "check_in">Check In</button>
                     <button type="submit" class="btn btn-xs btn-danger" data-student-id="<%= stu_result.internal_student_id %>" id = "check_out">Check Out</button>
         	</div>	
         </div>
-</div>
-<% elsif stu_result.nil?  %>
-<div class="col-6">
-        <div class="card">
+<% elsif stu_check_result.present?  %>
+<!-- <div class="col-6"> -->
+        <div class="card" style="max-height:450px;overflow:auto;">
             <div class="card-body align-items-center">
+                <br>
                 <div class="form-group form-inline">
                     <%= label_tag  "name", "Name:", class: "col-md-3" %>
                     <%= text_field_tag :name, stu_check_result.full_name, size: "30", class: "form-control" %>
@@ -55,7 +56,7 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "online_id", "Online ID:", class: "col-md-3" %>
-                    <%= text_field_tag :subject_id, stu_check_result.subject_id, size: "30", class: "form-control", :readonly => true%>
+                    <%= text_field_tag :student_online_id, stu_check_result.student_online_id, size: "30", class: "form-control", :readonly => true%>
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
@@ -64,17 +65,18 @@
                     <input type="radio" id="session_type_2" name="session_type" value="2"  > <%= label_tag :session_type_0, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_3" name="session_type" value="3"  > <%= label_tag :session_type_0, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_4" name="session_type" value="4"  > <%= label_tag :session_type_0, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;      
-                </div>
+                </div><br>
                 <div class='sessionValidation form-group form-inline' style="color:red;"></div>
                 <%= hidden_field_tag :senior_student_id, stu_check_result.senior_student_id%>
+                <%= hidden_field_tag :subject_id, stu_check_result.subject_id%>
               <br>
                     <button type="submit" class="btn btn-xs btn-success mr-5 "data-student-id="<%= stu_check_result.internal_student_id %>" id = "check_in">Check In</button>
                     <button type="submit" class="btn btn-xs btn-danger" data-student-id="<%= stu_check_result.internal_student_id %>" id = "check_out">Check Out</button>
             </div>  
         </div>
-</div>
-<%else%>
-    <h5 class="text-center"> Scanned Id doesn't match with any student Data, Please Scan again!</h5>
+<!-- </div> -->
+<%elsif stu_result.nil? && stu_check_result.nil? %>
+    <%= flash[:danger] = "Scanned Id doesn't match with any student Data, Please Scan again!" %>  
 <% end %>
 
 
@@ -98,12 +100,13 @@
             var last_name = $('#last_name').val();
             var student_id = $("#senior_student_id").val();
             var session_type = $('input[name="session_type"]:checked').val();
+            var student_online_code = $('#student_online_id').val();
             
             if(session_type >= 0){
                     $.ajax({
                              url: 'senior_students/check_in',
                              type: 'GET',
-                             data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, first_name: first_name, last_name: last_name, senior_student_id: student_id, session_type: session_type },
+                             data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, first_name: first_name, last_name: last_name, senior_student_id: student_id, session_type: session_type, student_online_id: student_online_code},
                              success: function(res) {
                                 location.reload();
                              },
@@ -125,12 +128,13 @@
                 var first_name = $('#first_name').val();
                 var last_name = $('#last_name').val();
                 var student_id = $("#senior_student_id").val();
+                var student_online_code = $('#student_online_id').val();
                 $.ajax({
                          url: 'senior_students/check_out',
                          type: 'GET',
-                         data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, first_name: first_name, last_name: last_name, senior_student_id: student_id },
+                         data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, first_name: first_name, last_name: last_name, senior_student_id: student_id,student_online_id: student_online_code },
                          success: function(res) {
-                            var online_id = res.subject_id
+                            var online_id = res.student_online_id
                             print_data(online_id);
                             location.reload();
                          },
