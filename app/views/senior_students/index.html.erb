@@ -36,12 +36,11 @@
                 </div><br>
                 <div class="form-group form-inline">
                     <%= label_tag  "session", "Session:", class: "col-md-3" %>
+                    <input type="radio" id="session_4" name="session" value="4" disabled><%= label_tag :session_4, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_0" name="session" value="0" disabled><%= label_tag :session_0, 'DX', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_1" name="session" value="1" disabled><%= label_tag :session_1, 'ST', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_2" name="session" value="2" disabled><%= label_tag :session_2, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_3" name="session" value="3" disabled ><%= label_tag :session_3, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_4" name="session" value="4" disabled><%= label_tag :session_4, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                        
                 </div>
                 <br>
                 	<button type="submit" class="btn btn-xs btn-success mr-5" disabled>Check In</button>
@@ -61,11 +60,19 @@
  					</thead>
  					<tbody>
  						<% @senior_check_results.each do |stu| %>
-	 						<tr>
-	 							<td><%= datetime_formatted(stu.created_at)%></td>
-	 							<td><%= stu_check_name(stu.full_name) %></td>
-								<td><%= session_type(stu.session_type) %></td>
-	 						</tr>
+                            <% if stu.check_type == '1' %>
+    	 						<tr style="background-color:#ABEBC6;">
+    	 							<td><%= datetime_formatted(stu.created_at)%></td>
+    	 							<td><%= stu_check_name(stu.full_name) %></td>
+    								<td><%= session_type(stu.session_type) %></td>
+    	 						</tr>
+                            <% elsif stu.check_type == '2' %>
+                                <tr style="background-color:#F5B7B1;">
+                                    <td><%= datetime_formatted(stu.created_at)%></td>
+                                    <td><%= stu_check_name(stu.full_name) %></td>
+                                    <td><%= session_type(stu.session_type) %></td>
+                                </tr>
+                            <% end %>
 	 					<% end %>
  					</tbody>
  				</table>

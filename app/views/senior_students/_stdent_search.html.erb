@@ -20,11 +20,12 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
+                    <input type="radio" id="session_type_4" name="session_type" value="4"><%= label_tag :session_type_4, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_0" name="session_type" value="0" required="required"><%= label_tag :session_type_0, 'DX', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_1" name="session_type" value="1" ><%= label_tag :session_type_1, 'ST', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_2" name="session_type" value="2"><%= label_tag :session_type_2, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_3" name="session_type" value="3" ><%= label_tag :session_type_3, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_type_4" name="session_type" value="4"><%= label_tag :session_type_4, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    
                         
                 </div><br>
                 <div class='sessionValidation form-group form-inline' style="color:red;"></div>
@@ -60,11 +61,12 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
+                    <input type="radio" id="session_type_4" name="session_type" value="4"  > <%= label_tag :session_type_0, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp; 
                     <input type="radio" id="session_type_0" name="session_type" value= "0" > <%= label_tag :session_type_0, 'DX', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_1" name="session_type" value="1"  > <%= label_tag :session_type_0, 'ST', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_2" name="session_type" value="2"  > <%= label_tag :session_type_0, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="session_type_3" name="session_type" value="3"  > <%= label_tag :session_type_0, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_type_4" name="session_type" value="4"  > <%= label_tag :session_type_0, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;      
+                         
                 </div><br>
                 <div class='sessionValidation form-group form-inline' style="color:red;"></div>
                 <%= hidden_field_tag :senior_student_id, stu_check_result.senior_student_id%>
