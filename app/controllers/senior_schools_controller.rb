@@ -14,7 +14,7 @@ class SeniorSchoolsController < ApplicationController
 		if @senior_school.save
 			flash[:success] = "School information successfully added"
 		else
-			flash[:warning] ="School Could not be created"
+			flash[:danger] ="School Could not be created"
 		end
 		redirect_to senior_schools_path
 	end
@@ -108,6 +108,11 @@ class SeniorSchoolsController < ApplicationController
 		# @senior_school = SeniorSchool.find(params[:school_id])
 	end
 
+	def show
+		@senior_school = SeniorStudent.where(school_id: params[:id])
+		@senior_school_name = SeniorSchool.find_by_id(params[:id])
+	end
+
 	private
 
     def respond_simple
@@ -118,7 +123,7 @@ class SeniorSchoolsController < ApplicationController
     end
 
     def senior_school_params
-		params.require(:senior_school).permit(:school_name, :season_name, :photographer_id, :session_name)
-	end
+			params.require(:senior_school).permit(:school_name, :season_name, :photographer_id, :session_name)
+		end
 	
 end
