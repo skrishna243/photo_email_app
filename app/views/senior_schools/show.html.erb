@@ -1,36 +1,38 @@
-<!-- <div class="card">
+<div class="card">
 	<div class="card-header header-style">
-		<h4>CHECK IN/OUT STUDENT DATA</h4>
+		<h4><%= @senior_school_name.school_name %> BLUE PRINT UPLOADED DATA</h4>
 	</div>
-  <%# unless @senior_student_school.nil? || @senior_student_school.empty? %>
+  <% unless @senior_school.nil? || @senior_school.empty? %>
 	<div class = "card-body">
 		<div><h3 class="tool_bar"></h3></div>
 		<div class="table-responsive">
 			<table id="student_table" class="table table-bordered">
 				<thead>
 					<tr>
-						<th>Student Name</th>
-						<th>Session</th>
-						<th>Check In Time</th>
-						<th>Check Out Time</th>
+						<th>Student Id</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Online Code</th>
+						<th>Email</th>
 					</tr>
 				</thead>
 				<tbody>
-					<%# @senior_student_school.each do |stu| %>
+					<% @senior_school.each do |stu| %>
 						<tr>
-							<td><%#= stu_check_name(stu.full_name) %></td>
-							<td><%#= session_type(stu.session_type)  %></td>
-							<td><%#= datetime_formatted(stu.created_at)%></td>
-							<td><%#= datetime_formatted(stu.updated_at)%></td>
+							<td><%= stu.internal_student_id%></td>
+							<td><%= stu.first_name %></td>
+							<td><%= stu.last_name %></td>
+							<td><%= stu.online_code %></td>
+							<td><%= stu.email %></td>
 						</tr>
-					<%# end %>
+					<% end %>
 				</tbody>
 			</table>
-	<%# else %>
+	<% else %>
 		<div class = "card-body">
 			<p>Currently there is no data to show.</p>
 		</div>
-	<%# end %>
+	<% end %>
 	</div>
 	</div>
 </div>
@@ -67,35 +69,9 @@
 	)();
 
 
-	var dat_1 =	$("#student_table").DataTable({
-
-					   dom: 'Bfrtip',
-					  "initComplete": function () {
-										var api = this.api();
-										var dx_count = api.column(1).data().filter(function(value, index) { return value ===  "DX" ? true : false; }).length;
-										var st_count = api.column(1).data().filter(function(value, index) { return value ===  "ST" ? true : false; }).length;
-										var yb_count = api.column(1).data().filter(function(value, index) { return value ===  "YB" ? true : false; }).length;
-										var rt_count = api.column(1).data().filter(function(value, index) { return value ===  "RT" ? true : false; }).length;
-										var ug_count = api.column(1).data().filter(function(value, index) { return value ===  "UG" ? true : false; }).length;
-										var total_res = "Session Totals DX: " + dx_count + ", ST: " + st_count + ", YB: " + yb_count + ", RT: " + rt_count + ", UG: " + ug_count;
-											return $('.tool_bar').html( total_res);
-									},
-					buttons:[
-								{
-								    	
-								    extend: 'excel',
-								    text: 'Export',
-								    filename: 'Student_check_in_out_data',
-								    title: function(){
-										    	return $('.tool_bar').text()
-										    },
-								    
-								}
-					  		],
-
-			});
+	var dat_1 =	$("#student_table").DataTable({	});
 	
 
 	
-</script> -->
+</script>
 

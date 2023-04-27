@@ -25,8 +25,13 @@
 				<td><%= (sch.school_name).upcase %></td>
 				<td><%= date_formatted(sch.created_at)%></td>
 				<td> <%= link_to 'View', senior_school_senior_students_path(sch.id),  class: 'btn btn-success'  %> &nbsp;&nbsp;&nbsp;
-					<%= button_tag('Edit'.html_safe, class: 'btn btn-default  btn-edit-school', 'data-school-id': sch.id)%> &nbsp;&nbsp;&nbsp;
-					<%= button_tag('Blue Print Upload'.html_safe,  class: 'btn btn-danger upload-btn', 'data-school-id': sch.id)  %>
+					<%= link_to 'Show', senior_school_path(sch.id),  class: 'btn btn-info'  %>&nbsp;&nbsp;&nbsp;
+					<% @shcool_data_present = SeniorStudent.where(school_id: sch.id)%>
+					<% unless @shcool_data_present.nil? || @shcool_data_present.empty? %>
+						<button class="btn btn-default" disabled>Blue Print Upload</button>
+					<% else %>
+						<%= button_tag('Blue Print Upload'.html_safe,  class: 'btn btn-danger upload-btn', 'data-school-id': sch.id)  %>
+					<% end %>
 				</td>
 			</tr>
 		<% end %>
@@ -108,21 +113,21 @@
     });
 
 
-    $(document).on('click','.btn-edit-school' , function() {
-    	var school_id = $(this).data('school-id');
-      $.ajax({
-        url: 'senior_schools/' + school_id + '/edit',
+    // $(document).on('click','.btn-edit-school' , function() {
+    // 	var school_id = $(this).data('school-id');
+    //   $.ajax({
+    //     url: 'senior_schools/' + school_id + '/edit',
 
-        success: function(edit_school_modal) {
-          $('#school_modal_container .modal-body').html(edit_school_modal);
-          $('.modal').modal('hide');
-          $('#school_modal_container').modal('show');
-          $('#school_modal_container .modal-title').html('Edit School');
-        }
+    //     success: function(edit_school_modal) {
+    //       $('#school_modal_container .modal-body').html(edit_school_modal);
+    //       $('.modal').modal('hide');
+    //       $('#school_modal_container').modal('show');
+    //       $('#school_modal_container .modal-title').html('Edit School');
+    //     }
 
-      });
+    //   });
 
-    });
+    // });
 
     $(document).on('click','.upload-btn' , function() {
     	var school_id = $(this).data('school-id');
