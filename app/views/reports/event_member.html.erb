@@ -136,7 +136,7 @@
   var date_to   = year1 + "_" + month1 + "_" + date1
 	var event_name  		 = urlParams.get('event_name')
 
-	<% unless @event_member_data.nil? %>
+	<% unless @event_member_data.nil? || @event_member_data.empty? %>
 	 var event_date = "<%= @event_member_data.first.event_date %>"
 	 var event_location = "<%= @event_member_data.first.event_location %>"
 
