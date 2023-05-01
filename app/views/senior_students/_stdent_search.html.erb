@@ -20,11 +20,11 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
-                    <input type="radio" id="session_type_4" name="session_type" value="4"><%= label_tag :session_type_4, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_type_0" name="session_type" value="0" required="required"><%= label_tag :session_type_0, 'DX', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_type_1" name="session_type" value="1" ><%= label_tag :session_type_1, 'ST', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_type_2" name="session_type" value="2"><%= label_tag :session_type_2, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_type_3" name="session_type" value="3" ><%= label_tag :session_type_3, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_4" name="session_type" value=4><%= label_tag :session_type_4, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_0" name="session_type" value=0 required="required"><%= label_tag :session_type_0, 'DX', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_1" name="session_type" value=1 ><%= label_tag :session_type_1, 'ST', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_2" name="session_type" value=2><%= label_tag :session_type_2, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_3" name="session_type" value=3><%= label_tag :session_type_3, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                     
                         
                 </div><br>
@@ -61,11 +61,11 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
-                    <input type="radio" id="session_type_4" name="session_type" value="4"  > <%= label_tag :session_type_0, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp; 
-                    <input type="radio" id="session_type_0" name="session_type" value= "0" > <%= label_tag :session_type_0, 'DX', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_type_1" name="session_type" value="1"  > <%= label_tag :session_type_0, 'ST', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_type_2" name="session_type" value="2"  > <%= label_tag :session_type_0, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="session_type_3" name="session_type" value="3"  > <%= label_tag :session_type_0, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_4" name="session_type" value="4"  > <%= label_tag :session_type_0, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp; 
+                    <input type="checkbox" id="session_type_0" name="session_type" value= "0" > <%= label_tag :session_type_0, 'DX', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_1" name="session_type" value="1"  > <%= label_tag :session_type_0, 'ST', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_2" name="session_type" value="2"  > <%= label_tag :session_type_0, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_3" name="session_type" value="3"  > <%= label_tag :session_type_0, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
                          
                 </div><br>
                 <div class='sessionValidation form-group form-inline' style="color:red;"></div>
@@ -84,13 +84,36 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        $('input[type=checkbox]').change(function(){
+                check1()
+        });
+        function check1(){
+            var a = check_length()
+            var session_4 = $('#session_type_4').is(":checked")
+            if(a.length <= 1 && session_4 == true){
+                $('.sessionValidation').text("Please select from which session to upgrade");
+            }else if (a.length > 1 && session_4 == true){
+               $('.sessionValidation').text(""); 
+            }else if (session_4 == false){
+               $('.sessionValidation').text(""); 
+            }
+        }
+        function check_length(){
+             var array_push = [];
+                $("input[type=checkbox]:checked").each(function() {
+                    array_push.push(Number(this.value));
+                });
+                return array_push;
+        }
          // $('input[name="session_type"]').prop('checked', false);
     <% unless stu_check_result.nil?%>
-        var session_type_load = <%= stu_check_result.session_type %>
-        if(session_type_load>= 0){
-            $('input[name="session_type"][value= "' + session_type_load + '"]').prop('checked', true)
-            $('input[name="session_type"]').prop('disabled', true);
-        }
+           var session_type_load = <%= stu_check_result.session_type %>
+            if(session_type_load.length > 0){
+                $(session_type_load).each((index, element) =>{
+                    $('input[name="session_type"][value= "' + element + '"]').prop('checked', true)
+                    $('input[name="session_type"]').prop('disabled', true);
+                })   
+            }
     <% end %>
 
         $('#check_in').click(function() {
@@ -103,12 +126,12 @@
             var student_id = $("#senior_student_id").val();
             var session_type = $('input[name="session_type"]:checked').val();
             var student_online_code = $('#student_online_id').val();
-            
-            if(session_type >= 0){
+            var session_type_length = check_length()
+            if(session_type_length.length > 0){
                     $.ajax({
                              url: 'senior_students/check_in',
                              type: 'GET',
-                             data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, first_name: first_name, last_name: last_name, senior_student_id: student_id, session_type: session_type, student_online_id: student_online_code},
+                             data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, first_name: first_name, last_name: last_name, senior_student_id: student_id, session_type: session_type_length, student_online_id: student_online_code},
                              success: function(res) {
                                 location.reload();
                              },

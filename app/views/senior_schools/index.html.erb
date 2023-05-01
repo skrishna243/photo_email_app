@@ -16,21 +16,26 @@
 	<table class="table table-bordered text-center" id = "schools_table">
 	<thead>
 		<th>School  Name</th>
-		<th>Added On</th>
+		<!-- <th>Added On</th> -->
 		<th>Actions</th>
 	</thead>
 	<tbody>
 		<% @senior_schools.each do |sch| %>
 			<tr>
 				<td><%= (sch.school_name).upcase %></td>
-				<td><%= date_formatted(sch.created_at)%></td>
+				<!-- <td><%#= date_formatted(sch.created_at)%></td> -->
 				<td> <%= link_to 'View', senior_school_senior_students_path(sch.id),  class: 'btn btn-success'  %> &nbsp;&nbsp;&nbsp;
-					<%= link_to 'Show', senior_school_path(sch.id),  class: 'btn btn-info'  %>&nbsp;&nbsp;&nbsp;
-					<% @shcool_data_present = SeniorStudent.where(school_id: sch.id)%>
-					<% unless @shcool_data_present.nil? || @shcool_data_present.empty? %>
-						<button class="btn btn-default" disabled>Blue Print Upload</button>
+					<%= link_to 'Verify', senior_school_path(sch.id),  class: 'btn btn-info'  %>&nbsp;&nbsp;&nbsp;
+					<%# @school_data_present = SeniorStudent.where(school_id: sch.id)%>
+					<%# unless @school_data_present.nil? || @school_data_present.empty? %>
+						<!-- <button class="btn btn-default" disabled>Blue Print Upload</button> -->
+					<%# else %>
+						<%#= button_tag('Blue Print Upload'.html_safe,  class: 'btn btn-danger upload-btn', 'data-school-id': sch.id)  %>
+					<%# end %>
+					<% if sch.senior_students.present?%>
+							<button class="btn btn-default" disabled>Blue Print Upload</button>
 					<% else %>
-						<%= button_tag('Blue Print Upload'.html_safe,  class: 'btn btn-danger upload-btn', 'data-school-id': sch.id)  %>
+							<%= button_tag('Blue Print Upload'.html_safe,  class: 'btn btn-danger upload-btn', 'data-school-id': sch.id)  %>
 					<% end %>
 				</td>
 			</tr>

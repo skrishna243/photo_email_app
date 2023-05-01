@@ -110,11 +110,11 @@
 					   dom: 'Bfrtip',
 					  "initComplete": function () {
 										var api = this.api();
-										var dx_count = api.column(1).data().filter(function(value, index) { return value ===  "DX" ? true : false; }).length;
-										var st_count = api.column(1).data().filter(function(value, index) { return value ===  "ST" ? true : false; }).length;
-										var yb_count = api.column(1).data().filter(function(value, index) { return value ===  "YB" ? true : false; }).length;
-										var rt_count = api.column(1).data().filter(function(value, index) { return value ===  "RT" ? true : false; }).length;
-										var ug_count = api.column(1).data().filter(function(value, index) { return value ===  "UG" ? true : false; }).length;
+										var dx_count = api.column(1).data().filter(function(value, index) { return value.includes('DX') ? true : false; }).length;
+										var st_count = api.column(1).data().filter(function(value, index) { return value.includes('ST') ? true : false; }).length;
+										var yb_count = api.column(1).data().filter(function(value, index) { return value.includes('YB') ? true : false; }).length;
+										var rt_count = api.column(1).data().filter(function(value, index) { return value.includes('RT') ? true : false; }).length;
+										var ug_count = api.column(1).data().filter(function(value, index) { return value.includes('UG') ? true : false; }).length;
 										var total_res = "Session Totals DX: " + dx_count + ", ST: " + st_count + ", YB: " + yb_count + ", RT: " + rt_count + ", UG: " + ug_count;
 											return $('.tool_bar').html( total_res);
 									},

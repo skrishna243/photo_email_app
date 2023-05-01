@@ -228,17 +228,49 @@ module ApplicationHelper
 		if session_type.nil?
 			'N/A'
 		else
-			case session_type.to_i
-			when 0
+			case JSON.parse(session_type)
+			# when 0
+			# 	'DX'
+			# when 1
+			# 	'ST'
+			# when 2
+			# 	'YB'
+			# when 3
+			# 	'RT'
+			# when 4
+			# 	'UG'
+			# else 'N/A'
+			# end
+			when [0]
 				'DX'
-			when 1
+			when [1]
 				'ST'
-			when 2
+			when [2]
 				'YB'
-			when 3
+			when [3]
 				'RT'
-			when 4
+			when [4]
 				'UG'
+			when [4, 0]
+				"UG, DX"
+			when [4, 1]
+				"UG, ST"
+			when [4, 2]
+				"UG, YB"
+			when [4, 3]
+				"UG, RT"
+			when [1, 0]
+				"ST, DX"
+			when [1, 2]
+				"ST, YB"
+			when [1, 3]
+				"ST, RT"
+			when [2, 0]
+				"YB, DX"
+			when [2, 3]
+				"YB, RT"
+			when [3, 0]
+				"RT, DX"
 			else 'N/A'
 			end
 		end
