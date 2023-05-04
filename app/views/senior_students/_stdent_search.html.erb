@@ -8,7 +8,7 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "student_id", "Student ID:", class: "col-md-3" %>
-                    <%= text_field_tag :internal_student_id, stu_result.internal_student_id, size: "30", class: "form-control", :readonly => true %>
+                    <%= text_field_tag :internal_student_id, stu_result.subject_id, size: "30", class: "form-control", :readonly => true %>
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "email", "Email(s):", class: "col-md-3" %>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "online_id", "Online ID:", class: "col-md-3" %>
-                    <%= text_field_tag :student_online_id, stu_result.online_code, size: "30", class: "form-control", :readonly => true%>
+                    <%= text_field_tag :student_online_id, stu_result.internal_student_id, size: "30", class: "form-control", :readonly => true%>
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
@@ -33,7 +33,7 @@
                 <%= hidden_field_tag :last_name, stu_result.last_name %>
                 <%= hidden_field_tag :senior_student_id, stu_result.id%>
                 <%= hidden_field_tag :subject_id, stu_result.subject_id%>
-              <!-- <br> -->
+              <br id="br1" />
                     <button type="submit" class="btn btn-xs btn-success mr-5 "data-student-id="<%= stu_result.internal_student_id %>" id = "check_in">Check In</button>
                     <button type="submit" class="btn btn-xs btn-danger" data-student-id="<%= stu_result.internal_student_id %>" id = "check_out">Check Out</button>
         	</div>	
@@ -49,7 +49,7 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "student_id", "Student ID:", class: "col-md-3" %>
-                    <%= text_field_tag :internal_student_id, stu_check_result.internal_student_id, size: "30", class: "form-control", :readonly => true %>
+                    <%= text_field_tag :internal_student_id, stu_check_result.subject_id, size: "30", class: "form-control", :readonly => true %>
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "email", "Email(s):", class: "col-md-3" %>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "online_id", "Online ID:", class: "col-md-3" %>
-                    <%= text_field_tag :student_online_id, stu_check_result.student_online_id, size: "30", class: "form-control", :readonly => true%>
+                    <%= text_field_tag :student_online_id, stu_check_result.internal_student_id, size: "30", class: "form-control", :readonly => true%>
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
@@ -92,10 +92,13 @@
             var session_4 = $('#session_type_4').is(":checked")
             if(a.length <= 1 && session_4 == true){
                 $('.sessionValidation').text("Please select from which session to upgrade");
+                $('#br1').hide();
             }else if (a.length > 1 && session_4 == true){
                $('.sessionValidation').text(""); 
+               $('#br1').show();
             }else if (session_4 == false){
-               $('.sessionValidation').text(""); 
+               $('.sessionValidation').text("");
+               $('#br1').show(); 
             }
         }
         function check_length(){
@@ -139,6 +142,7 @@
                           });
             }else{
                 $('.sessionValidation').text("Session Type is required.");
+                $('#br1').hide();
                 return false;
             }
         });
