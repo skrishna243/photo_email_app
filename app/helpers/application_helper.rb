@@ -15,6 +15,14 @@ module ApplicationHelper
 		end
 	end
 
+	def stu_id(student_id)
+		if student_id.nil?
+			'N/A'
+		else
+			student_id
+		end
+	end
+
 	def school_name
 		[
 			['South Lakes High School', '0'], 

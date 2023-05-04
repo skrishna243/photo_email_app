@@ -132,6 +132,7 @@
 					<tr>
 						<th>School  Name</th>
 						<th>Student Name</th>
+						<th>Student Id</th>
 						<th>Parent  Email</th>
 						<!-- <th>Student Email</th> -->
 						<th>Sport</th>
@@ -145,6 +146,7 @@
 						<tr>
 							<td><%= stu.school_name  %></td>
 							<td><%= stu.student_name %></td>
+							<td><%= stu_id(stu.student_id).html_safe  %></td>
 							<td><%= stu.parent_email %></td>
 							<!-- <td><%#= stu.student_email %></td> -->
 							<td><%= stu.type_of_sport  %></td>
