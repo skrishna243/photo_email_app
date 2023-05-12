@@ -259,6 +259,8 @@ module ApplicationHelper
 				'RT'
 			when [4]
 				'UG'
+			when [5]
+				'NS'
 			when [4, 0]
 				"UG, DX"
 			when [4, 1]
@@ -281,6 +283,14 @@ module ApplicationHelper
 				"RT, DX"
 			else 'N/A'
 			end
+		end
+	end
+
+	def new_data_entry(new_data)
+		if new_data.nil?
+			'N/A'
+		else
+			new_data
 		end
 	end
 
