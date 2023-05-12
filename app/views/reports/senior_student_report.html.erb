@@ -52,6 +52,8 @@
 				<thead>
 					<tr>
 						<th>Student Name</th>
+						<th>Email</th>
+						<th>New Data Entry</th>
 						<th>Session</th>
 						<th>Check In Time</th>
 						<th>Check Out Time</th>
@@ -61,6 +63,8 @@
 					<% @senior_student_school.each do |stu| %>
 						<tr>
 							<td><%= stu_check_name(stu.full_name) %></td>
+							<td><%= stu.email%></td>
+							<td><%= new_data_entry(stu.new_data).html_safe%></td>
 							<td><%= session_type(stu.session_type)  %></td>
 							<td><%= datetime_formatted(stu.created_at)%></td>
 							<td><%= datetime_formatted(stu.updated_at)%></td>
@@ -113,12 +117,13 @@
 					   dom: 'Bfrtip',
 					  "initComplete": function () {
 										var api = this.api();
-										var dx_count = api.column(1).data().filter(function(value, index) { return value.includes('DX') ? true : false; }).length;
-										var st_count = api.column(1).data().filter(function(value, index) { return value.includes('ST') ? true : false; }).length;
-										var yb_count = api.column(1).data().filter(function(value, index) { return value.includes('YB') ? true : false; }).length;
-										var rt_count = api.column(1).data().filter(function(value, index) { return value.includes('RT') ? true : false; }).length;
-										var ug_count = api.column(1).data().filter(function(value, index) { return value.includes('UG') ? true : false; }).length;
-										var total_res = "Session Totals DX: " + dx_count + ", ST: " + st_count + ", YB: " + yb_count + ", RT: " + rt_count + ", UG: " + ug_count;
+										var dx_count = api.column(3).data().filter(function(value, index) { return value.includes('DX') ? true : false; }).length;
+										var st_count = api.column(3).data().filter(function(value, index) { return value.includes('ST') ? true : false; }).length;
+										var yb_count = api.column(3).data().filter(function(value, index) { return value.includes('YB') ? true : false; }).length;
+										var rt_count = api.column(3).data().filter(function(value, index) { return value.includes('RT') ? true : false; }).length;
+										var ug_count = api.column(3).data().filter(function(value, index) { return value.includes('UG') ? true : false; }).length;
+										var ns_count = api.column(3).data().filter(function(value, index) { return value.includes('NS') ? true : false; }).length;
+										var total_res = "Session Totals DX: " + dx_count + ", ST: " + st_count + ", YB: " + yb_count + ", RT: " + rt_count + ", UG: " + ug_count + ", NS: " + ns_count;
 											return $('.tool_bar').html( total_res);
 									},
 					buttons:[
