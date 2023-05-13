@@ -1,3 +1,33 @@
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <%= link_to 'BACK TO SCHOOLS',senior_schools_path, class: 'btn btn-secondary'  %>
+</div><br>
+
+<div class="card">
+    <div class="card-header header-style"><h3>SENIOR SCHOOLS</h3></div>
+    <div class="card-body">
+   		<div class="table-responsive">
+			<table class="table table-bordered text-center" id = "senior_schools_table">
+			<thead>
+				<th>School Name</th>
+				<th>Added On</th>
+				<th>Actions</th>
+			</thead>
+			<tbody>
+				<% @senior_schools.each do |sch| %>
+					<tr>
+						<td><%= (sch.school_name).upcase %></td>
+						<td><%= time_formatted(sch.created_at)%></td>
+						<td> <%= link_to 'View', senior_school_senior_student_checks_path(sch.id),  class: 'btn btn-success'  %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<br><br>
+
 <div class="card">
 	<div class="card-header header-style">
 			<h4>SENIOR SCHOOL SEARCH</h4>
@@ -5,28 +35,28 @@
 	<div class = "card-body">
 			<%= form_tag(senior_student_report_reports_path, method: "get") do  %>
 
-					<div class="row justify-content-center">
-		        <div class="col-md-6">
-		          <div class="row">
-		            <div class="col-sm-3">
-		              <%= label_tag 'Event Date' %>
-		            </div>
-		            <div class="col-md-9">
-		            <%= date_select :event_date, :date_from1, class: "form-control", required: true %>
-		            </div>
-		          </div>
-		        </div> 
-		        <div class="col-md-6">
-			      	<div class="row">
-			      		<div class="col-sm-3">
-			        		<%= label_tag 'event_name', 'School Name' %>
-			         </div>
-			         <div class="col-md-9">
-			        				<%= select_tag :school_name, options_for_select(@senior_schools.map { |value| [ value.school_name, value.id]}, :selected => nil), { include_blank: '----- Select School ------', class: 'form-control' , :required => true} %>
-			         </div>
-			       </div>
-			      </div>
-		      </div>
+				<div class="row justify-content-center">
+			        <div class="col-md-6">
+			          <div class="row">
+			            <div class="col-sm-3">
+			                <%= label_tag 'Event Date' %>
+			            </div>
+			            <div class="col-md-9">
+			            	<%= date_select :event_date, :date_from1, class: "form-control", required: true %>
+			            </div>
+			          </div>
+			        </div> 
+			        <div class="col-md-6">
+				      	<div class="row">
+				      		<div class="col-sm-3">
+				        		<%= label_tag 'event_name', 'School Name' %>
+				         	</div>
+					         <div class="col-md-9">
+					        	<%= select_tag :school_name, options_for_select(@senior_schools.map { |value| [ value.school_name, value.id]}, :selected => nil), { include_blank: '----- Select School ------', class: 'form-control' , :required => true} %>
+					         </div>
+				       </div>
+				    </div>
+		        </div>
 				<br>
 					
 			      <%= hidden_field_tag 'report_type',  '206'%>
@@ -36,7 +66,7 @@
 		      </div>
 
 			<% end %>
-</div>
+	</div>
 </div><br><br><br>
 
 <% unless @senior_student_school.nil? || @senior_student_school.empty? %>
@@ -112,6 +142,8 @@
 	
  	$(document).ready(function () {
  		$("#footer").removeClass("footer");
+ 		$("#senior_schools_table").DataTable({ });
+ 		
  		var dat_1 =	$("#student_table").DataTable({
 
 					   dom: 'Bfrtip',
