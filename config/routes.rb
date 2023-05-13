@@ -31,8 +31,10 @@ resources :senior_schools do
         get :student_search
         get :check_in
         get :check_out
+        get :check_in_update
       end
     end
+    resources :senior_student_checks
 end
 
 resources :reports do

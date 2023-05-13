@@ -49,4 +49,24 @@ class SeniorStudentsController < ApplicationController
 			end
 		end
 	end
+
+	def check_in_update
+		if params[:student_id].present?
+			@senior_student_check = SeniorStudentCheck.where(school_id: params[:senior_school_id], internal_student_id: params[:student_id], check_type: 1).last
+			if @senior_student_check.present?
+					@real_session_type = params[:session_type].map(&:to_i)
+					unless params[:check_in_new_data] == "YES"
+						new_email_entry =  params[:student_email] == params[:check_in_student_email] ? "NO" : "YES"
+						@senior_student_check.update(email: params[:student_email], full_name: params[:student_full_name], new_data: new_email_entry, session_type: @real_session_type )
+					 	flash[:success] = "Student data successfully updated"
+					else
+						@senior_student_check.update(email: params[:student_email], full_name: params[:student_full_name], session_type: @real_session_type )
+					 	flash[:success] = "Student data successfully updated"
+					end
+			else
+					flash[:danger] = "Student data didn't update, please try again"
+			end
+		end
+	end
+	
 end

@@ -37,6 +37,7 @@
                 <%= hidden_field_tag :original_student_email, stu_result.email%>
               <br id="br1" />
                     <button type="submit" class="btn btn-xs btn-success mr-5 "data-student-id="<%= stu_result.internal_student_id %>" id = "check_in">Check In</button>
+                    <button type="submit" class="btn btn-xs btn-warning mr-5 "data-student-id="<%= stu_result.internal_student_id %>" id = "check_update">UPDATE</button>
                     <button type="submit" class="btn btn-xs btn-danger" data-student-id="<%= stu_result.internal_student_id %>" id = "check_out">Check Out</button>
         	</div>	
         </div>
@@ -75,8 +76,10 @@
                 <%= hidden_field_tag :senior_student_id, stu_check_result.senior_student_id%>
                 <%= hidden_field_tag :subject_id, stu_check_result.subject_id%>
                 <%= hidden_field_tag :check_in_student_email, stu_check_result.email%>
-              <br>
+                <%= hidden_field_tag :check_in_new_entry, stu_check_result.new_data%>
+              <br id="br1">
                     <button type="submit" class="btn btn-xs btn-success mr-5 "data-student-id="<%= stu_check_result.internal_student_id %>" id = "check_in">Check In</button>
+                    <button type="submit" class="btn btn-xs btn-warning mr-5" data-student-id= "<%= stu_check_result.internal_student_id %>" data-school-id= "<%= stu_check_result.school_id %>" id = "check_update">UPDATE</button>
                     <button type="submit" class="btn btn-xs btn-danger" data-student-id="<%= stu_check_result.internal_student_id %>" id = "check_out">Check Out</button>
             </div>  
         </div>
@@ -118,7 +121,7 @@
             if(session_type_load.length > 0){
                 $(session_type_load).each((index, element) =>{
                     $('input[name="session_type"][value= "' + element + '"]').prop('checked', true)
-                    $('input[name="session_type"]').prop('disabled', true);
+                    // $('input[name="session_type"]').prop('disabled', true);
                 })   
             }
     <% end %>
@@ -245,6 +248,51 @@
             }
         }
 
+        $('#check_update').click(function() { 
+            var school_id               = $(this).data('school-id');
+            var checked_internal_student_id = $(this).data('student-id');
+            var full_name               = $('#name').val();
+            var student_email           = $('#email').val();
+            var student_subject_id      = $('#subject_id').val();
+            var student_id              = $("#senior_student_id").val();
+            var student_online_code     = $('#student_online_id').val();
+            var check_in_student_email  = $('#check_in_student_email').val();
+            var check_in_new_data       = $('#check_in_new_entry').val();
+            var session_type_length = check_length()
+            var session_4 = $('#session_type_4').is(":checked")
+
+            if(session_4 == true){
+                    if(session_type_length.length > 1){
+                        $.ajax({
+                                 url: 'senior_students/check_in_update',
+                                 type: 'GET',
+                                 data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, senior_student_id: student_id,student_online_id: student_online_code, check_in_student_email:  check_in_student_email, session_type: session_type_length, check_in_new_data: check_in_new_data},
+                                 success: function(res) {
+                                    location.reload();
+                                 },
+                                 error: function(e) { console.log(e) }
+                              });
+                    }else{
+                        $('.sessionValidation').text("Please select from which session to upgrade before Update");
+                    }
+            } else if(session_type_length.length > 0) {
+                        $.ajax({
+                             url: 'senior_students/check_in_update',
+                             type: 'GET',
+                             data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, senior_student_id: student_id,student_online_id: student_online_code, check_in_student_email:  check_in_student_email, session_type: session_type_length, check_in_new_data: check_in_new_data},
+                             success: function(res) {
+                                location.reload();
+                             },
+                             error: function(e) { console.log(e) }
+                        });
+            } 
+            else {
+                 $('.sessionValidation').text("Session Type is required.");
+                 $('#br1').hide();
+                 return false;
+            }
+
+        });
 
     });
 

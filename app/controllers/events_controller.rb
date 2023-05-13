@@ -33,6 +33,10 @@ class EventsController < ApplicationController
 			 redirect_to events_path
 	end
 
+	def show
+		@event_member_data = EventMember.where(event_id: params[:id])
+	end
+
 	private
 
 	    def respond_simple
