@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-	before_action :set_school_names
+	before_action :set_school_names, only:[:index]
 
 	def index	
 		if params[:report_type] == '204'
@@ -40,12 +40,17 @@ class ReportsController < ApplicationController
 	def senior_student_report
 
 		@senior_schools = SeniorSchool.all.order('school_name asc')
+		@senior_school_students = SeniorStudentCheck.find_by_sql("select ssc.school_id, ss.school_name, ssc.created_at from senior_student_checks as ssc join senior_schools as ss on ss.id = ssc.school_id group by ssc.school_id")
 		if params[:report_type] == '206'
 			@start_date          	= Date.new( params[:event_date]["date_from1(1i)"].to_i, params[:event_date]["date_from1(2i)"].to_i, params[:event_date]["date_from1(3i)"].to_i).to_date.beginning_of_day
 			 @end_date             = Date.new( params[:event_date]["date_from1(1i)"].to_i, params[:event_date]["date_from1(2i)"].to_i, params[:event_date]["date_from1(3i)"].to_i).to_date.end_of_day
 			@senior_student_school  = SeniorStudentCheck.where("created_at between ? and ? AND school_id = ?",@start_date, @end_date, params[:school_name] )
 			
 		end
+	end
+
+	def slate_detail_report
+		@slate = Slate.where(photographer_id: current_user.id)
 	end
 
 private

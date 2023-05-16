@@ -298,6 +298,34 @@ module ApplicationHelper
 		date.present? ? date.strftime('%m/%d, %T') : ''
 	end
 
+	def slate_gender_type(gender_type)
+		if gender_type.nil?
+			'N/A'
+		else
+			case gender_type.to_i
+				when 0
+					'Boys'
+				when 1
+					'Girls'
+				when 2
+					'CO-ED'
+				else 'N/A'
+			end
+		end
+	end
 
+	def slate_team_type(team_type)
+		case team_type.to_i
+			when 0
+				'Varsity'
+			when 1
+				'JV'
+			when 2
+				'Freshman'
+			when 3
+				'MS'
+			else 'N/A'
+		end	
+	end
 
 end

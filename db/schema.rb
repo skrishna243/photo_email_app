@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_12_023118) do
+ActiveRecord::Schema.define(version: 2023_05_16_013447) do
 
   create_table "event_members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "student_name"
@@ -87,6 +87,34 @@ ActiveRecord::Schema.define(version: 2023_05_12_023118) do
     t.string "group"
     t.text "image_name"
     t.string "yearbook_selection"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "slate_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "slate_id"
+    t.integer "photographer_id"
+    t.string "sport_name"
+    t.string "team_type"
+    t.string "season_name"
+    t.string "gender_type"
+    t.string "staff_type"
+    t.integer "image_start"
+    t.integer "image_end"
+    t.integer "total_count"
+    t.string "note"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "coach_count"
+    t.string "atheletes_count"
+    t.string "manager_count"
+  end
+
+  create_table "slates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "school_name"
+    t.string "season_name"
+    t.string "photographer_name"
+    t.integer "photographer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

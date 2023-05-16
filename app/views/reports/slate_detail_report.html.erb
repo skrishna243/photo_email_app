@@ -1,45 +1,28 @@
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <%= link_to 'BACK',senior_schools_path, class: 'btn btn-secondary'  %>
-</div><br>
 <div class="card">
-	<div class="card-header header-style">
-		<h4><%= @senior_school_name.school_name %> BLUE PRINT UPLOADED DATA</h4>
-	</div>
-  <% unless @senior_school.nil? || @senior_school.empty? %>
-	<div class = "card-body">
-		<div><h3 class="tool_bar"></h3></div>
-		<div class="table-responsive">
-			<table id="student_table" class="table table-bordered">
-				<thead>
+    <div class="card-header header-style"><h3>SLATE</h3></div>
+    <div class="card-body">
+   		<div class="table-responsive">
+			<table class="table table-bordered text-center" id = "slate_report_table">
+			<thead>
+				<th>Season Name</th>
+				<th>School Name</th>
+				<th>Photographer Name</th>
+				<th>Actions</th>
+			</thead>
+			<tbody>
+				<% @slate.each do |sla| %>
 					<tr>
-						<th>Student Id</th>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Online Code</th>
-						<th>Email</th>
+						<td><%= (sla.season_name).upcase %></td>
+						<td><%= (sla.school_name).upcase %></td>
+						<td><%= (sla.photographer_name).upcase %></td>
+						<td> <%= link_to 'View', slate_path(sla.id),  class: 'btn btn-success'  %></td>
 					</tr>
-				</thead>
-				<tbody>
-					<% @senior_school.each do |stu| %>
-						<tr>
-							<td><%= stu.internal_student_id%></td>
-							<td><%= stu.first_name %></td>
-							<td><%= stu.last_name %></td>
-							<td><%= stu.online_code %></td>
-							<td><%= stu.email %></td>
-						</tr>
-					<% end %>
-				</tbody>
+				<% end %>
+			</tbody>
 			</table>
-	<% else %>
-		<div class = "card-body">
-			<p>Currently there is no data to show.</p>
 		</div>
-	<% end %>
-	</div>
 	</div>
 </div>
-
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
@@ -54,29 +37,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
 
 <script type="text/javascript">
-	(function()
-
-		{
-		  if( window.localStorage )
-		  	// debugger;
-		  {
-		    if( !localStorage.getItem('firstLoad') )
-		    {
-		      localStorage['firstLoad'] = true;
-		      window.location.reload();
-		    }  
-		    else
-		      localStorage.removeItem('firstLoad');
-		  }
-		}
-	)();
-
-
-	var dat_1 =	$("#student_table").DataTable({	
-								"order": []
-							});
-	
-
-	
+	$(document).ready(function () { 
+		$("#slate_report_table").DataTable({ });
+	});
 </script>
-
