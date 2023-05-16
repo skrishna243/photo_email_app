@@ -37,12 +37,18 @@ resources :senior_schools do
     resources :senior_student_checks
 end
 
+resources :slates do
+  resources :slate_details
+end
 resources :reports do
   collection do
       get :event_member
   end
   collection do
       get :senior_student_report
+  end
+  collection do
+      get :slate_detail_report
   end
 end
 

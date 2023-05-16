@@ -9,15 +9,15 @@
 			<table class="table table-bordered text-center" id = "senior_schools_table">
 			<thead>
 				<th>School Name</th>
-				<th>Added On</th>
+				<th>Added At</th>
 				<th>Actions</th>
 			</thead>
 			<tbody>
-				<% @senior_schools.each do |sch| %>
+				<% @senior_school_students.each do |sch| %>
 					<tr>
-						<td><%= (sch.school_name).upcase %></td>
+						<td><%= sch.school_name %></td>
 						<td><%= time_formatted(sch.created_at)%></td>
-						<td> <%= link_to 'View', senior_school_senior_student_checks_path(sch.id),  class: 'btn btn-success'  %>
+						<td> <%= link_to 'View', senior_school_senior_student_checks_path(sch.school_id),  class: 'btn btn-success'  %>
 						</td>
 					</tr>
 				<% end %>
