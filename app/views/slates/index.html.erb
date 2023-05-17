@@ -17,8 +17,8 @@
 			<table class="table table-bordered text-center" id = "events_table">
 				<thead>
 					<th>School Name</th>
-					<th>Season Name</th>
-					<th>Photographer Name</th>
+					<th>Season</th>
+					<th>Photographer</th>
 					<th>Added At</th>
 					<th>Actions</th>
 				</thead>
@@ -67,7 +67,7 @@
 		setTimeout(function(){
 	    	$('.flash-panel').fadeOut();
 	    }, 2000);
-
+		$("#footer").removeClass("footer");
 		$('#add_slate').on('click', function() {
 	      showNewSlateModal();
 	    });

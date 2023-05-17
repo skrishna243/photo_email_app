@@ -75,7 +75,7 @@
 					    		</div>
 					    	</div>
 						</div><br>
-						<div class="row note_row" style="display: none;">
+						<div class="row">
 								<div class="form-group" style="display: flex">
 									&nbsp;&nbsp;&nbsp;&nbsp;<%= f.label :note, 'Note' %>&nbsp;&nbsp;&nbsp;&nbsp;
 				    			<%= f.text_area :note, class: 'form-control',  rows: '4', cols:'50' %>
@@ -111,9 +111,9 @@
 
 		 $("input[type=radio]").click(function () {
 			    if($('#slate_detail_team_type_3')[0].checked) {
-					   $('.note_row').show();
+					   $('#slate_detail_note').prop("required", true);
 					} else {
-					 		$('.note_row').hide();
+					 		$('#slate_detail_note').prop("required", false);
 					}
 			});
 

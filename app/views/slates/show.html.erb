@@ -6,6 +6,7 @@
 	<div class="card-header header-style"><h4>Slate Details</h4></div>
 		<% unless @slate_detail_data.nil? || @slate_detail_data.empty? %>
 			<div class = "card-body">
+				<div><h5 class="tool_bar">School: <%= @slate.school_name %>, Season: <%= @slate.season_name %>, Photographer:<%= @slate.photographer_name %>, Date: <%= time_formatted(@slate.created_at) %></h5></div>
 				<table id="slate_table" class="table table-bordered">
 					<thead>
 						<tr>
@@ -70,8 +71,10 @@
 							    	
 							    extend: 'excel',
 							    text: 'Export',
-							    title: "Slate Details",
-							    filename: "slate_name"
+							    title: function(){
+								    	return $('.tool_bar').text()
+								    },
+							    filename: "slate_detail_data"
 							}
 				  		]
 		});
