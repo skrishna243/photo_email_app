@@ -1,20 +1,25 @@
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <%= link_to 'BACK TO SLATES',slates_path, class: 'btn btn-secondary'  %>
+</div><br>
 <div class="card">
     <div class="card-header header-style"><h3>SLATE</h3></div>
     <div class="card-body">
    		<div class="table-responsive">
 			<table class="table table-bordered text-center" id = "slate_report_table">
 			<thead>
-				<th>Season Name</th>
 				<th>School Name</th>
-				<th>Photographer Name</th>
+				<th>Season</th>
+				<th>Photographer</th>
+				<th>Added at</th>
 				<th>Actions</th>
 			</thead>
 			<tbody>
 				<% @slate.each do |sla| %>
 					<tr>
-						<td><%= (sla.season_name).upcase %></td>
 						<td><%= (sla.school_name).upcase %></td>
+						<td><%= (sla.season_name).upcase %></td>
 						<td><%= (sla.photographer_name).upcase %></td>
+						<td><%= time_formatted(sla.created_at)%></td>
 						<td> <%= link_to 'View', slate_path(sla.id),  class: 'btn btn-success'  %></td>
 					</tr>
 				<% end %>
@@ -38,6 +43,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function () { 
+		$("#footer").removeClass("footer");
 		$("#slate_report_table").DataTable({ });
 	});
 </script>

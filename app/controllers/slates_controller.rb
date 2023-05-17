@@ -20,6 +20,7 @@ class SlatesController < ApplicationController
 	end
 
 	def show
+		@slate = Slate.find_by_id(params[:id])
 		@slate_detail_data = SlateDetail.where(slate_id: params[:id])
 	end
 
