@@ -9,10 +9,10 @@ class SlateDetailsController < ApplicationController
 		@slate_detail = @slate.slate_details.create(slate_detail_params)
 		if @slate_detail.save
 			flash[:success] = "Slate Details Successfully Created"
-			redirect_to slates_path
+			redirect_to new_slate_slate_detail_path
 		else
 			flash[:danger] = "Slate Details creation failed!"
-			redirect_to slates_path
+			redirect_to new_slate_slate_detail_path
 		end
 	end
 
