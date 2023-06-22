@@ -1,7 +1,8 @@
 class SeniorSchoolsController < ApplicationController
 	require "csv"
 	def index
-		@senior_schools = SeniorSchool.includes(:senior_students).where(photographer_id: current_user.id)
+		# @senior_schools = SeniorSchool.includes(:senior_students).where(photographer_id: current_user.id)
+		@senior_schools = SeniorSchool.includes(:senior_students).all
 	end
 
 	def new

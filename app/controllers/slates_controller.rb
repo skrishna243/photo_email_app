@@ -1,7 +1,8 @@
 class SlatesController < ApplicationController
 
 	def index
-		@slates = Slate.where(photographer_id: current_user.id)
+		# @slates = Slate.where(photographer_id: current_user.id)
+		@slates = Slate.all
 	end
 
 	def new
