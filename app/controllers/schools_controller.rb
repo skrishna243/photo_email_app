@@ -1,6 +1,7 @@
 class SchoolsController < ApplicationController
 	def index
-		@schools = School.where(user_id: current_user.id)
+		# @schools = School.where(user_id: current_user.id)
+		@schools = School.all
 	end
 
 	def new
