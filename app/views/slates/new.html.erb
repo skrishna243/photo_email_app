@@ -4,21 +4,21 @@
      <div class="row">
        <div class="col-md-4">
                 <div class="form-group">
-                  <label for="route" class="control-label star">School Name</label>
-                  <%=f.text_field :school_name, class: 'form-control', :required => true %>
+                  <label for="slate_school_name" class="control-label star">School Name</label>
+                  <%=f.text_field :school_name, :required => true %>
                 </div>
         </div>
 
         <div class="col-md-4">
                 <div class="form-group">
-                  <label for="route" class="control-label star">Season Name</label>
+                  <label for="slate_season_name" class="control-label star">Season Name</label>
                   <%=f.select :season_name, options_for_select(season_name), { include_blank: '----- Select Season ------'}, {class: 'form-control' , :required => true} %>
                 </div>
                 <%=f.hidden_field :photographer_id, value: current_user.id%>
         </div>
         <div class="col-md-4">
                 <div class="form-group">
-                  <label for="route" class="control-label star">Photographer Name</label>
+                  <label for="slate_photographer_name" class="control-label star">Photographer Name</label>
                   <%=f.text_field :photographer_name, class: 'form-control', :required => true %>
                 </div>
         </div>
@@ -37,3 +37,40 @@
 </div>
 
 <% end %>
+
+<script type="text/javascript">
+        $(document).ready(function () { 
+
+                var $select = $('#slate_school_name').selectize({
+                      // create: true,
+                      sortField: 'text',
+                      maxItems: 1,
+                      valueField: 'school_name',
+                      labelField: 'school_name',
+                      loadThrottle: 800,
+                      searchField: ['school_name'],
+                      placeholder: "All Schools",
+                      options: [],
+                      render: {
+                              item: function(item, escape) {
+                                 return '<div>' + (item.school_name ? '<span class="name">' + escape(item.school_name) + '</span>' : '') + '</div>';
+                              },
+                      },
+
+                    load: function(query, callback) {
+                      if (query.length < 1) return callback();
+                      $.ajax({
+                        url: 'slates/slate_school_search',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: { query: query },
+                        error: function() { callback(); },
+                        success: function(res) { callback(res); }
+                      });
+                    },
+
+
+                    });
+
+        });
+</script>

@@ -38,6 +38,9 @@ resources :senior_schools do
 end
 
 resources :slates do
+  collection do
+    get :slate_school_search
+  end
   resources :slate_details
 end
 resources :reports do
