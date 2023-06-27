@@ -17,7 +17,9 @@
 								    <% else %>
 								    	<%= f.select :sport_name, options_for_select(winter_sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-control'} %>
 								    <% end %> 
+								    <%= f.text_field :sport_name, id:"hidden_sport_name", class: 'form-control ', placeholder:"Enter sport name" %>
 						    </div> 
+						    
 						    <div class="col-md-4 text-center">
 					    		<label class= 'form-control'>
 						 					<%= f.radio_button :gender_type, '0', class: 'text-center' %>
@@ -116,6 +118,18 @@
 					 		$('#slate_detail_note').prop("required", false);
 					}
 			});
+
+		 $('#hidden_sport_name').hide();
+		 $('#slate_detail_sport_name').change(function(){
+    		var selectedsport = $(this).children("option:selected").val();
+	    		if(selectedsport == "Other"){
+	    			$('#hidden_sport_name').val(null);
+	    			$('#hidden_sport_name').show();
+	    		}else{
+	    			$('#hidden_sport_name').hide();
+	    			$('#hidden_sport_name').val(selectedsport);
+	    		}
+    	 });
 
 	});
 </script>

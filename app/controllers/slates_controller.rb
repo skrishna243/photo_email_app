@@ -25,6 +25,12 @@ class SlatesController < ApplicationController
 		@slate_detail_data = SlateDetail.where(slate_id: params[:id])
 	end
 
+	def slate_school_search
+		patient_search = "#{params[:query]}%"
+      	results = SchoolName.where("name LIKE ?", "%#{patient_search}%").map { |user| {  school_name:"#{user.name}"}}
+		render json: results
+	end
+
 	private
 
 	    def respond_simple
