@@ -11,8 +11,10 @@
 			<div><h3 class="tool_bar"></h3></div>
 			<table id="student_table" class="table table-bordered">
 				<thead>
-					<tr>
-						<th>Student Name</th>
+					<tr class="text-center">
+						<th>Student ID</th>
+						<th>Last Name</th>
+						<th>First Name</th>
 						<th>Email</th>
 						<th>New Data Entry</th>
 						<th>Session</th>
@@ -23,7 +25,9 @@
 				<tbody>
 					<% @senior_check_data.each do |stu| %>
 						<tr>
-							<td><%= stu_check_name(stu.full_name) %></td>
+							<td><%= stu.subject_id %></td>
+							<td><%= stu.last_name %></td>
+							<td><%= stu.first_name %></td>
 							<td><%= stu.email%></td>
 							<td><%= new_data_entry(stu.new_data).html_safe%></td>
 							<td><%= session_type(stu.session_type)  %></td>
