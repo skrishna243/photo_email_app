@@ -15,6 +15,7 @@
                   <%=f.select :season_name, options_for_select(season_name, @school.season_name), { include_blank: '----- Select Season ------'}, {class: 'form-control' , :required => true} %>
                 </div>
                 <%=f.hidden_field :user_id, value: current_user.id%>
+                <%=f.hidden_field :data_archival, value: 2%>
         </div>
     </div>
 

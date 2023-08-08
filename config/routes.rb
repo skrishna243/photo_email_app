@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get 'landing', to: 'landings#landing'
 
 resources :schools do
+  collection do
+    get :schools_school_search
+  end
   resources :students 
 end
 
@@ -34,7 +37,13 @@ resources :senior_schools do
         get :check_in_update
       end
     end
-    resources :senior_student_checks
+    resources :senior_student_checks do
+      collection do
+        get :student_checks_expand
+        get :edit_student_check
+        get :update_student_check
+      end
+    end
 end
 
 resources :slates do

@@ -32,6 +32,35 @@
 <% end %>
 <br><br>
 
+<div class="card">
+    <div class="card-header header-style"><h3>SLATE SEARCH</h3></div>
+    <div class="card-body">
+   		<div class="table-responsive">
+			<table class="table table-bordered text-center" id = "slate_report_table">
+			<thead>
+				<th>School Name</th>
+				<th>Season</th>
+				<th>Photographer</th>
+				<th>Added at</th>
+				<th>Actions</th>
+			</thead>
+			<tbody>
+				<% @slate.each do |sla| %>
+					<tr>
+						<td><%= (sla.school_name).upcase %></td>
+						<td><%= (sla.season_name).upcase %></td>
+						<td><%= (sla.photographer_name).upcase %></td>
+						<td><%= time_formatted(sla.created_at)%></td>
+						<td> <%= link_to 'View', slate_path(sla.id),  class: 'btn btn-success'  %></td>
+					</tr>
+				<% end %>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<br><br>
 
 <div class="card">
 	<div class="card-header header-style">
@@ -161,11 +190,12 @@
 				</tbody>
 			</table>
 		</div>
-	<% end %>
+	
 
 	</div>
 </div>
 <br><br><br>
+<% end %>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
@@ -197,6 +227,7 @@
 		  }
 		}
 	)();
+	$("#slate_report_table").DataTable({ });
 	$("#schools_table").DataTable({ 
 			"order": [[ 2, 'desc' ]]
 	});
