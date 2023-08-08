@@ -1,7 +1,9 @@
 class SchoolsController < ApplicationController
 	def index
 		# @schools = School.where(user_id: current_user.id)
-		@schools = School.all
+		# @schools = School.all
+		#data archival changes were 1 means YES and 2 means NO
+		@schools = School.where(data_archival: 2)
 	end
 
 	def new
@@ -56,6 +58,12 @@ class SchoolsController < ApplicationController
 		@student_school = Student.where(school_id: params[:id])
 	end
 
+	def schools_school_search
+		school_search = "#{params[:query]}%"
+      	results = SchoolName.where("name LIKE ?", "%#{school_search}%").map { |user| {  school_name:"#{user.name}"}}
+		render json: results
+	end
+
 	private
 
     def respond_simple
@@ -66,6 +74,6 @@ class SchoolsController < ApplicationController
     end
 
     def school_params
-			params.require(:school).permit(:school_name, :season_name, :user_id)
+			params.require(:school).permit(:school_name, :season_name, :user_id, :data_archival)
 		end
 end

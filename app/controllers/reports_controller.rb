@@ -23,6 +23,7 @@ class ReportsController < ApplicationController
 		@school_end_date   = Date.new(@year, 12, 31).to_date.end_of_day
 		# @schools = School.order(updated_at: :desc).where("created_at between ? and ? and user_id =?", @school_start_date, @school_end_date, current_user.id)
 		@schools = School.order(updated_at: :desc).where("created_at between ? and ?", @school_start_date, @school_end_date)		
+		@slate = Slate.all
 	end
 
 	def event_member
