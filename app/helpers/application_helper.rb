@@ -328,4 +328,21 @@ module ApplicationHelper
 		end	
 	end
 
+	def slate_detail_team_name
+		[
+			['Varsity', '0'],
+			['JV', '1'],
+			['Freshman', '2'],
+			['MS', '3']
+		]
+	end
+
+	def slate_detail_gender_name
+		[
+			['Boys', '0'],
+			['Girls', '1'],
+			['CO-ED', '2']
+		]
+	end
+
 end
