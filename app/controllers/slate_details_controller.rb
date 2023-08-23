@@ -2,6 +2,10 @@ class SlateDetailsController < ApplicationController
 	def new
 		@slate = Slate.find(params[:slate_id])
 		@slate_detail = SlateDetail.new
+		@date = Date.today
+		@start_date = @date.beginning_of_day
+		@end_date   = @date.end_of_day
+		@slate_detail_result = SlateDetail.order(updated_at: :desc).where("created_at between ? and ? and slate_id = ?", @start_date, @end_date,  params[:slate_id])
 	end
 
 	def create
@@ -28,7 +32,19 @@ class SlateDetailsController < ApplicationController
 		else
 			flash[:danger] = "Slate Details cannot update after event"
 		end
-			 redirect_to slate_path(@slate.slate_id)
+		if params[:pag_exp] == "yes"
+			redirect_to slate_detail_expand_slate_slate_details_path(@slate.slate_id)	
+		else
+			redirect_to slate_path(@slate.slate_id)
+		end	
+	end
+
+	def slate_detail_expand
+		@date = Date.today
+		@start_date = @date.beginning_of_day
+		@end_date   = @date.end_of_day
+		@slate_name = Slate.find_by_id(params[:slate_id])
+		@slate_detail_result = SlateDetail.where("created_at between ? and ? and slate_id = ?", @start_date, @end_date,  params[:slate_id])
 	end
 
 	private

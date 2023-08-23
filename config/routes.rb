@@ -50,7 +50,11 @@ resources :slates do
   collection do
     get :slate_school_search
   end
-  resources :slate_details
+  resources :slate_details do
+    collection do
+      get :slate_detail_expand
+    end
+  end
 end
 resources :reports do
   collection do
