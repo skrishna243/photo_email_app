@@ -11,7 +11,7 @@
 
     <div class=" form-group form-inline">
         <%= label_tag  "student_id", "Student ID:", class: "col-md-3" %>
-        <%= text_field_tag :internal_student_id, @student_check.senior_student_id, size: "30", class: "form-control", :readonly => true%>
+        <%= text_field_tag :internal_student_id, @student_check.subject_id, size: "30", class: "form-control"%>
     </div>
 
     <div class="form-group form-inline">
@@ -69,11 +69,10 @@
         }
 
         $('#check_update').click(function() { 
-
             var first_name              = $('#first_name').val();
             var last_name               = $('#last_name').val();
             var student_email           = $('#email').val();
-            var student_id              = $("#senior_student_id").val();
+            var student_id              = $("#internal_student_id").val();
             var student_online_code     = $('#student_online_id').val();
             var student_check_id = $('#check_id').val();
             var student_school_id = $('#school_id').val();
@@ -82,7 +81,7 @@
              $.ajax({
                          url: '/senior_schools/' + student_school_id + '/senior_student_checks/update_student_check',
                          type: 'GET',
-                         data: { first_name: first_name, last_name: last_name, email: student_email,  senior_student_id: student_id, student_online_id: student_online_code, id: student_check_id, id: student_check_id, school_id: student_school_id, session_type: session_type_length},
+                         data: { first_name: first_name, last_name: last_name, email: student_email,  student_id: student_id, student_online_id: student_online_code, id: student_check_id, school_id: student_school_id, session_type: session_type_length},
                          success: function(res) {
                             location.reload();
                          },
