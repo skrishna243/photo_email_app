@@ -19,7 +19,7 @@ class SeniorStudentChecksController < ApplicationController
 		if params[:id].present?
 			@real_session_type = params[:session_type].map(&:to_i)
 			@senior_student_check = SeniorStudentCheck.where(school_id: params[:school_id], id: params[:id])
-			if	@senior_student_check.update(email: params[:email], first_name: params[:first_name], last_name: params[:last_name], session_type: @real_session_type)
+			if	@senior_student_check.update(email: params[:email], first_name: params[:first_name], last_name: params[:last_name], session_type: @real_session_type, subject_id: params[:student_id])
 				 flash[:success] = "Student Data Successfully Updated"
 			else
 				flash[:danger] = "Student Data Updation failed"

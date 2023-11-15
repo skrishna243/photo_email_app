@@ -8,7 +8,7 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "student_id", "Student ID:", class: "col-md-3" %>
-                    <%= text_field_tag :internal_student_id, stu_result.subject_id, size: "30", class: "form-control", :readonly => true %>
+                    <%= text_field_tag :internal_student_id, stu_result.subject_id, size: "30", class: "form-control"%>
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "email", "Email(s):", class: "col-md-3" %>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "student_id", "Student ID:", class: "col-md-3" %>
-                    <%= text_field_tag :internal_student_id, stu_check_result.subject_id, size: "30", class: "form-control", :readonly => true %>
+                    <%= text_field_tag :internal_student_id, stu_check_result.subject_id, size: "30", class: "form-control" %>
                 </div>
                 <div class="form-group form-inline">
                     <%= label_tag  "email", "Email(s):", class: "col-md-3" %>
@@ -130,7 +130,7 @@
             var checked_internal_student_id = $(this).data('student-id');
             var full_name           = $('#name').val();
             var student_email       = $('#email').val();
-            var student_subject_id  = $('#subject_id').val();
+            var student_subject_id  = $('#internal_student_id').val();
             var first_name = $('#first_name').val();
             var last_name = $('#last_name').val();
             var student_id = $("#senior_student_id").val();
@@ -161,7 +161,7 @@
                 var checked_internal_student_id = $(this).data('student-id');
                 var full_name           = $('#name').val();
                 var student_email       = $('#email').val();
-                var student_subject_id  = $('#subject_id').val();
+                var student_subject_id  = $('#internal_student_id').val();
                 var first_name = $('#first_name').val();
                 var last_name = $('#last_name').val();
                 var student_id = $("#senior_student_id").val();
@@ -253,7 +253,7 @@
             var checked_internal_student_id = $(this).data('student-id');
             var full_name               = $('#name').val();
             var student_email           = $('#email').val();
-            var student_subject_id      = $('#subject_id').val();
+            var student_subject_id      = $('#internal_student_id').val();
             var student_id              = $("#senior_student_id").val();
             var student_online_code     = $('#student_online_id').val();
             var check_in_student_email  = $('#check_in_student_email').val();

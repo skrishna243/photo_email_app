@@ -22,7 +22,8 @@
 				<tbody>
 					<% @senior_school.each do |stu| %>
 						<tr>
-							<td><%= stu.internal_student_id%></td>
+							<!-- <td><%#= stu.internal_student_id%></td> -->
+							<td><%= stu.subject_id%></td>
 							<td><%= stu.first_name %></td>
 							<td><%= stu.last_name %></td>
 							<td><%= stu.online_code %></td>
