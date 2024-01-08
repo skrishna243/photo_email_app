@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
 	def index
-		@events = Event.where(user_id: current_user.id)
+		# @events = Event.where(user_id: current_user.id)
+		@events = Event.all
 	end
 
 	def new
@@ -31,6 +32,10 @@ class EventsController < ApplicationController
 			flash[:danger] = "Event informtion cannot update"
 		end
 			 redirect_to events_path
+	end
+
+	def show
+		@event_member_data = EventMember.where(event_id: params[:id])
 	end
 
 	private

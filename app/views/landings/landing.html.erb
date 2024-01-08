@@ -1,14 +1,22 @@
 <div class="land-container">
 <div class="text-center row jumbotron jumbotron-fluid">
-  <div class="col-md-4">
-		<%= link_to 'SPORTS', schools_path,  class: 'btn btn-lg btn-slo'  %>
+
+  <div class=" col-md-4">
+    <button class="btn btn-lg btn-slo dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      SPORTS
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <%= link_to 'SCHOOLS',schools_path, class: ' dropdown-item'  %>
+      <%= link_to 'SLATES',slates_path, class: 'dropdown-item'  %>
     </div>
+  </div>
   <div class="col-md-4">
 		<%= link_to 'EVENTS', events_path,  class: 'btn btn-lg btn-slo'  %>
-    </div>
-    <div class="col-md-4">
-		<%= link_to 'SENIORS',landing_path, class: 'btn btn-lg btn-slo'  %>
-    </div>
+  </div>
+  <div class="col-md-4">
+		<%= link_to 'SENIORS',senior_schools_path, class: 'btn btn-lg btn-slo'  %>
+  </div>
+    
 
 </div>
 </div>

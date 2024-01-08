@@ -1,0 +1,75 @@
+<div class="card">
+	<div class="card-header header-style"><h3>ADD SLATE</h3></div>
+	<div class="card-body">
+		<%= button_tag('New Slate', class: 'btn btn-info btn-sm-block float-right fa fa-plus', id: 'add_slate') %>
+		 <p>Please Use This Section to Create New Photo Slate </p>
+	</div>
+</div>
+
+<br><br><br>
+
+<% unless @slates.nil? || @slates.empty? %>
+
+<div class="card">
+  <div class="card-header header-style"><h3>SLATE DETAILS</h3></div>
+    <div class="card-body">
+	   <div class="table-responsive">
+			<table class="table table-bordered text-center" id = "events_table">
+				<thead>
+					<th>School Name</th>
+					<th>Season</th>
+					<th>Photographer</th>
+					<th>Added At</th>
+					<th>Actions</th>
+				</thead>
+				<tbody>
+					<% @slates.each do |sla| %>
+						<tr>
+							<td><%= (sla.school_name).upcase %></td>
+							<td><%= (sla.season_name).upcase %></td>
+							<td><%= (sla.photographer_name).upcase %></td>
+							<td><%= date_formatted(sla.created_at)%></td>
+							<td> <%= link_to 'View', new_slate_slate_detail_path(sla.id),  class: 'btn btn-success'  %></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<% end %>
+
+<div class="modal fade" id="slate_modal_container" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header"><h4 class="modal-title m0">New SLATE</h4></div>
+      <div class="modal-body"></div>	    
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+	function showNewSlateModal() {
+	    $.ajax({
+	      	  url: 'slates/new',
+		      success: function(new_school_body) {
+		        $('#slate_modal_container .modal-body').html(new_school_body);
+		        $('.modal').modal('hide');
+		        $('#slate_modal_container').modal('show');
+		        $('#slate_modal_container .modal-title').html('New SLATE');
+		      }
+	    });
+	}
+
+	$(document).ready(function(){ 
+		setTimeout(function(){
+	    	$('.flash-panel').fadeOut();
+	    }, 2000);
+		// $("#footer").removeClass("footer");
+		$('#add_slate').on('click', function() {
+	      showNewSlateModal();
+	    });
+	});
+</script>

@@ -15,6 +15,14 @@ module ApplicationHelper
 		end
 	end
 
+	def stu_id(student_id)
+		if student_id.nil?
+			'N/A'
+		else
+			student_id
+		end
+	end
+
 	def school_name
 		[
 			['South Lakes High School', '0'], 
@@ -216,6 +224,125 @@ module ApplicationHelper
 	    date.present? ? date.strftime('%m/%d/%Y') : ''
 	end
 
+	def stu_check_name(full_name)
+		if full_name.nil?
+			'N/A'
+		else
+			full_name.upcase			
+		end
+	end
 
+	def session_type(session_type)
+		if session_type.nil?
+			'N/A'
+		else
+			case JSON.parse(session_type)
+			# when 0
+			# 	'DX'
+			# when 1
+			# 	'ST'
+			# when 2
+			# 	'YB'
+			# when 3
+			# 	'RT'
+			# when 4
+			# 	'UG'
+			# else 'N/A'
+			# end
+			when [0]
+				'DX'
+			when [1]
+				'ST'
+			when [2]
+				'YB'
+			when [3]
+				'RT'
+			when [4]
+				'UG'
+			when [5]
+				'NS'
+			when [4, 0]
+				"UG, DX"
+			when [4, 1]
+				"UG, ST"
+			when [4, 2]
+				"UG, YB"
+			when [4, 3]
+				"UG, RT"
+			when [1, 0]
+				"ST, DX"
+			when [1, 2]
+				"ST, YB"
+			when [1, 3]
+				"ST, RT"
+			when [2, 0]
+				"YB, DX"
+			when [2, 3]
+				"YB, RT"
+			when [3, 0]
+				"RT, DX"
+			else 'N/A'
+			end
+		end
+	end
+
+	def new_data_entry(new_data)
+		if new_data.nil?
+			'N/A'
+		else
+			new_data
+		end
+	end
+
+	def datetime_formatted(date)
+		date.present? ? date.strftime('%m/%d, %T') : ''
+	end
+
+	def slate_gender_type(gender_type)
+		if gender_type.nil?
+			'N/A'
+		else
+			case gender_type.to_i
+				when 0
+					'Boys'
+				when 1
+					'Girls'
+				when 2
+					'CO-ED'
+				else 'N/A'
+			end
+		end
+	end
+
+	def slate_team_type(team_type)
+		case team_type.to_i
+			when 0
+				'Varsity'
+			when 1
+				'JV'
+			when 2
+				'Freshman'
+			when 3
+				'MS'
+			else 'N/A'
+		end	
+	end
+
+	def slate_detail_team_name
+		[
+			['Varsity', '0'],
+			['JV', '1'],
+			['Freshman', '2'],
+			['MS', '3']
+		]
+	end
+
+	def slate_detail_gender_name
+		[
+			['Boys', '0'],
+			['Girls', '1'],
+			['CO-ED', '2']
+		]
+	end
 
 end

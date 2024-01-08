@@ -1,0 +1,299 @@
+<% if stu_check_result.nil? && stu_result.present?  %>
+        <div class="card" style="max-height:450px;overflow:auto;">
+            <br>
+        	<div class="card-body align-items-center">
+                <div class="form-group form-inline">
+                    <%= label_tag  "name", "Name:", class: "col-md-3" %>
+                    <%= text_field_tag :name, stu_result.first_name + " "+ stu_result.last_name, size: "30", class: "form-control" %>
+                </div>
+                <div class="form-group form-inline">
+                    <%= label_tag  "student_id", "Student ID:", class: "col-md-3" %>
+                    <%= text_field_tag :internal_student_id, stu_result.subject_id, size: "30", class: "form-control"%>
+                </div>
+                <div class="form-group form-inline">
+                    <%= label_tag  "email", "Email(s):", class: "col-md-3" %>
+                    <%= text_area_tag :email, stu_result.email, size: "30", class: "form-control" %>
+                </div>
+                <div class="form-group form-inline">
+                    <%= label_tag  "online_id", "Online ID:", class: "col-md-3" %>
+                    <%= text_field_tag :student_online_id, stu_result.internal_student_id, size: "30", class: "form-control", :readonly => true%>
+                </div>
+                <div class="form-group form-inline">
+                    <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
+                    <input type="checkbox" id="session_type_4" name="session_type" value=4><%= label_tag :session_type_4, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_0" name="session_type" value=0 required="required"><%= label_tag :session_type_0, 'DX', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_1" name="session_type" value=1 ><%= label_tag :session_type_1, 'ST', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_2" name="session_type" value=2><%= label_tag :session_type_2, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_3" name="session_type" value=3><%= label_tag :session_type_3, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_5" name="session_type" value=5><%= label_tag :session_type_3, 'NS', class: 'text-center' %>
+                    
+                        
+                </div><br>
+                <div class='sessionValidation form-group form-inline' style="color:red;"></div>
+                <%= hidden_field_tag :first_name, stu_result.first_name %>
+                <%= hidden_field_tag :last_name, stu_result.last_name %>
+                <%= hidden_field_tag :senior_student_id, stu_result.id%>
+                <%= hidden_field_tag :subject_id, stu_result.subject_id%>
+                <%= hidden_field_tag :original_student_email, stu_result.email%>
+              <br id="br1" />
+                    <button type="submit" class="btn btn-xs btn-success mr-5 "data-student-id="<%= stu_result.internal_student_id %>" id = "check_in">Check In</button>
+                    <button type="submit" class="btn btn-xs btn-warning mr-5 "data-student-id="<%= stu_result.internal_student_id %>" id = "check_update">UPDATE</button>
+                    <button type="submit" class="btn btn-xs btn-danger" data-student-id="<%= stu_result.internal_student_id %>" id = "check_out">Check Out</button>
+        	</div>	
+        </div>
+<% elsif stu_check_result.present?  %>
+<!-- <div class="col-6"> -->
+        <div class="card" style="max-height:450px;overflow:auto;">
+            <div class="card-body align-items-center">
+                <br>
+                <div class="form-group form-inline">
+                    <%= label_tag  "name", "Name:", class: "col-md-3" %>
+                    <%= text_field_tag :name, stu_check_result.full_name, size: "30", class: "form-control" %>
+                </div>
+                <div class="form-group form-inline">
+                    <%= label_tag  "student_id", "Student ID:", class: "col-md-3" %>
+                    <%= text_field_tag :internal_student_id, stu_check_result.subject_id, size: "30", class: "form-control" %>
+                </div>
+                <div class="form-group form-inline">
+                    <%= label_tag  "email", "Email(s):", class: "col-md-3" %>
+                    <%= text_area_tag :email, stu_check_result.email, size: "30", class: "form-control" %>
+                </div>
+                <div class="form-group form-inline">
+                    <%= label_tag  "online_id", "Online ID:", class: "col-md-3" %>
+                    <%= text_field_tag :student_online_id, stu_check_result.internal_student_id, size: "30", class: "form-control", :readonly => true%>
+                </div>
+                <div class="form-group form-inline">
+                    <%= label_tag  "session_type", "Session:", class: "col-md-3" %>
+                    <input type="checkbox" id="session_type_4" name="session_type" value="4"  > <%= label_tag :session_type_0, 'UG', class: 'text-center' %>&nbsp;&nbsp;&nbsp; 
+                    <input type="checkbox" id="session_type_0" name="session_type" value= "0" > <%= label_tag :session_type_0, 'DX', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_1" name="session_type" value="1"  > <%= label_tag :session_type_0, 'ST', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_2" name="session_type" value="2"  > <%= label_tag :session_type_0, 'YB', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_3" name="session_type" value="3"  > <%= label_tag :session_type_0, 'RT', class: 'text-center' %>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="session_type_5" name="session_type" value="5"  > <%= label_tag :session_type_0, 'NS', class: 'text-center' %>
+                         
+                </div><br>
+                <div class='sessionValidation form-group form-inline' style="color:red;"></div>
+                <%= hidden_field_tag :senior_student_id, stu_check_result.senior_student_id%>
+                <%= hidden_field_tag :subject_id, stu_check_result.subject_id%>
+                <%= hidden_field_tag :check_in_student_email, stu_check_result.email%>
+                <%= hidden_field_tag :check_in_new_entry, stu_check_result.new_data%>
+              <br id="br1">
+                    <button type="submit" class="btn btn-xs btn-success mr-5 "data-student-id="<%= stu_check_result.internal_student_id %>" id = "check_in">Check In</button>
+                    <button type="submit" class="btn btn-xs btn-warning mr-5" data-student-id= "<%= stu_check_result.internal_student_id %>" data-school-id= "<%= stu_check_result.school_id %>" id = "check_update">UPDATE</button>
+                    <button type="submit" class="btn btn-xs btn-danger" data-student-id="<%= stu_check_result.internal_student_id %>" id = "check_out">Check Out</button>
+            </div>  
+        </div>
+<!-- </div> -->
+<%elsif stu_result.nil? && stu_check_result.nil? %>
+    <%= flash[:danger] = "Scanned Id doesn't match with any student Data, Please Scan again!" %>  
+<% end %>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('input[type=checkbox]').change(function(){
+                check1()
+        });
+        function check1(){
+            var a = check_length()
+            var session_4 = $('#session_type_4').is(":checked")
+            if(a.length <= 1 && session_4 == true){
+                $('.sessionValidation').text("Please select from which session to upgrade");
+                $('#br1').hide();
+            }else if (a.length > 1 && session_4 == true){
+               $('.sessionValidation').text(""); 
+               $('#br1').show();
+            }else if (session_4 == false){
+               $('.sessionValidation').text("");
+               $('#br1').show(); 
+            }
+        }
+        function check_length(){
+             var array_push = [];
+                $("input[type=checkbox]:checked").each(function() {
+                    array_push.push(Number(this.value));
+                });
+                return array_push;
+        }
+         // $('input[name="session_type"]').prop('checked', false);
+    <% unless stu_check_result.nil?%>
+           var session_type_load = <%= stu_check_result.session_type %>
+            if(session_type_load.length > 0){
+                $(session_type_load).each((index, element) =>{
+                    $('input[name="session_type"][value= "' + element + '"]').prop('checked', true)
+                    // $('input[name="session_type"]').prop('disabled', true);
+                })   
+            }
+    <% end %>
+
+        $('#check_in').click(function() {
+            var checked_internal_student_id = $(this).data('student-id');
+            var full_name           = $('#name').val();
+            var student_email       = $('#email').val();
+            var student_subject_id  = $('#internal_student_id').val();
+            var first_name = $('#first_name').val();
+            var last_name = $('#last_name').val();
+            var student_id = $("#senior_student_id").val();
+            var session_type = $('input[name="session_type"]:checked').val();
+            var student_online_code = $('#student_online_id').val();
+            var original_student_email = $('#original_student_email').val();
+            var session_type_length = check_length()
+            if(session_type_length.length > 0){
+                    $.ajax({
+                             url: 'senior_students/check_in',
+                             type: 'GET',
+                             data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, first_name: first_name, last_name: last_name, senior_student_id: student_id, session_type: session_type_length, student_online_id: student_online_code, original_student_email: original_student_email},
+                             success: function(res) {
+                                location.reload();
+                             },
+                             error: function(e) { console.log(e) }
+                          });
+            }else{
+                $('.sessionValidation').text("Session Type is required.");
+                $('#br1').hide();
+                return false;
+            }
+        });
+
+        $('#check_out').click(function() {
+             var con = confirm("Are You sure you want to checkout the student?")
+            if(con){
+                var checked_internal_student_id = $(this).data('student-id');
+                var full_name           = $('#name').val();
+                var student_email       = $('#email').val();
+                var student_subject_id  = $('#internal_student_id').val();
+                var first_name = $('#first_name').val();
+                var last_name = $('#last_name').val();
+                var student_id = $("#senior_student_id").val();
+                var student_online_code = $('#student_online_id').val();
+                var check_in_student_email = $('#check_in_student_email').val();
+                $.ajax({
+                         url: 'senior_students/check_out',
+                         type: 'GET',
+                         data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, first_name: first_name, last_name: last_name, senior_student_id: student_id,student_online_id: student_online_code, check_in_student_email:  check_in_student_email},
+                         success: function(res) {
+                            var online_id = res.student_online_id
+                            print_data(online_id);
+                            location.reload();
+                         },
+                         error: function(e) { console.log(e) }
+                      });
+            }
+            
+        });
+
+        function print_data(online_id){
+            try {
+                        var labelXml = '<?xml version="1.0" encoding="utf-8"?>\
+                                        <DieCutLabel Version="8.0" Units="twips" MediaType="Default">\
+                                          <PaperOrientation>Landscape</PaperOrientation>\
+                                          <Id>Small30336</Id>\
+                                          <PaperName>30336 1 in x 2-1/8 in</PaperName>\
+                                          <DrawCommands>\
+                                            <RoundRectangle X="0" Y="0" Width="1440" Height="3060" Rx="180" Ry="180"/>\
+                                          </DrawCommands>\
+                                          <ObjectInfo>\
+                                            <TextObject>\
+                                              <Name>TEXT</Name>\
+                                              <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                                              <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
+                                              <LinkedObjectName></LinkedObjectName>\
+                                              <Rotation>Rotation0</Rotation>\
+                                              <IsMirrored>False</IsMirrored>\
+                                              <IsVariable>False</IsVariable>\
+                                              <HorizontalAlignment>Left</HorizontalAlignment>\
+                                              <VerticalAlignment>Middle</VerticalAlignment>\
+                                              <TextFitMode>AlwaysFit</TextFitMode>\
+                                              <UseFullFontHeight>True</UseFullFontHeight>\
+                                              <Verticalized>False</Verticalized>\
+                                              <StyledText>\
+                                                <Element>\
+                                                  <String>1544749</String>\
+                                                  <Attributes>\
+                                                    <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
+                                                    <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                                                  </Attributes>\
+                                                </Element>\
+                                              </StyledText>\
+                                            </TextObject>\
+                                            <Bounds X="129.5999" Y="57.59995" Width="2846.4" Height="1300.8"/>\
+                                          </ObjectInfo>\
+                                        </DieCutLabel>';
+                        var label = dymo.label.framework.openLabelXml(labelXml) 
+                        label.setObjectText('TEXT', online_id);
+                        var printers = dymo.label.framework.getPrinters();
+                        if (printers.length == 0)
+                            throw "No DYMO printers are installed. Install DYMO printers.";
+
+                        var printerName = "";
+                        for (var i = 0; i < printers.length; ++i)
+                        {
+                            var printer = printers[i];
+                            if (printer.printerType == "LabelWriterPrinter")
+                            {
+                                printerName = printer.name;
+                                break;
+                            }
+                        }
+
+                        if (printerName == "")
+                            throw "No LabelWriter printers found. Install LabelWriter printer";
+
+                        // finally print the label
+                        label.print(printerName);
+            }
+            catch(e)
+            {
+                alert(e.message || e);
+            }
+        }
+
+        $('#check_update').click(function() { 
+            var school_id               = $(this).data('school-id');
+            var checked_internal_student_id = $(this).data('student-id');
+            var full_name               = $('#name').val();
+            var student_email           = $('#email').val();
+            var student_subject_id      = $('#internal_student_id').val();
+            var student_id              = $("#senior_student_id").val();
+            var student_online_code     = $('#student_online_id').val();
+            var check_in_student_email  = $('#check_in_student_email').val();
+            var check_in_new_data       = $('#check_in_new_entry').val();
+            var session_type_length = check_length()
+            var session_4 = $('#session_type_4').is(":checked")
+
+            if(session_4 == true){
+                    if(session_type_length.length > 1){
+                        $.ajax({
+                                 url: 'senior_students/check_in_update',
+                                 type: 'GET',
+                                 data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, senior_student_id: student_id,student_online_id: student_online_code, check_in_student_email:  check_in_student_email, session_type: session_type_length, check_in_new_data: check_in_new_data},
+                                 success: function(res) {
+                                    location.reload();
+                                 },
+                                 error: function(e) { console.log(e) }
+                              });
+                    }else{
+                        $('.sessionValidation').text("Please select from which session to upgrade before Update");
+                    }
+            } else if(session_type_length.length > 0) {
+                        $.ajax({
+                             url: 'senior_students/check_in_update',
+                             type: 'GET',
+                             data: {student_id: checked_internal_student_id, student_full_name: full_name, student_email: student_email, student_subject_id: student_subject_id, senior_student_id: student_id,student_online_id: student_online_code, check_in_student_email:  check_in_student_email, session_type: session_type_length, check_in_new_data: check_in_new_data},
+                             success: function(res) {
+                                location.reload();
+                             },
+                             error: function(e) { console.log(e) }
+                        });
+            } 
+            else {
+                 $('.sessionValidation').text("Session Type is required.");
+                 $('#br1').hide();
+                 return false;
+            }
+
+        });
+
+    });
+
+</script>

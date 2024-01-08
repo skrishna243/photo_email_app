@@ -1,0 +1,165 @@
+	  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+		  <%= link_to 'BACK', slates_path, class: 'btn btn-secondary'  %>
+		</div><br> <br>
+
+<div class="row">
+	<div class="col-6">
+
+	  <div class="card shadow border">
+			<div class="card-header header-style">
+				<h2 style="display:inline-block"><%= @slate.school_name %></h2><h2 style="float: right;"><%= @slate.photographer_name %></h2>
+			</div>
+			<div class = "card-body d-flex flex-column">
+						<%= form_with model: [@slate, @slate.slate_details.build] do |f| %>
+					 
+						<!-- <div class="row"> -->
+							  <div class="text-center form-group">
+								    <% if @slate.season_name == "FALL" %>
+								    	<%= f.select :sport_name, options_for_select(fall_sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-control', :required => true, style: "text-align: center"} %>
+								    <% elsif @slate.season_name == "SPRING" %>
+								    	<%= f.select :sport_name, options_for_select(spring_sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-control', :required => true, style: "text-align: center"} %>
+								    <% else %>
+								    	<%= f.select :sport_name, options_for_select(winter_sport_name), { include_blank: '----- Select Sport ------'}, {class: 'form-control', :required => true, style: "text-align: center"} %>
+								    <% end %> 
+								    <%= f.text_field :sport_name, id:"hidden_sport_name", class: 'form-control ', placeholder:"Enter sport name" %>
+						    </div> 
+						    
+						    <div class="text-center form-group">
+					    		<label class= 'form-control'>
+						 					<%= f.radio_button :gender_type, '0', class: 'text-center' %>
+						 				<label for ="slate_detail_gender_type_0">Boys</label>&nbsp;
+						 					<%= f.radio_button :gender_type, '1', class: 'text-center' %>
+						 				<label for ="slate_detail_gender_type_1">Girls</label>&nbsp;
+						 					<%= f.radio_button :gender_type, '2', class: 'text-center' %>
+						 				<label for ="slate_detail_gender_type_2">CO-ED</label>&nbsp;
+						 			</label>
+						    </div>
+						    <div class="text-center form-group">
+						    		<label class= 'form-control'> 
+								 				<%= f.radio_button :team_type, '0', class: 'text-center' %>
+								 				<label for ="slate_detail_team_type_0"> Varsity</label>&nbsp;
+								 				<%= f.radio_button :team_type, '1', class: 'text-center' %>
+								 				<label for ="slate_detail_team_type_1"> JV</label>&nbsp;
+								 				<%= f.radio_button :team_type, '2', class: 'text-center' %>
+								 				<label for ="slate_detail_team_type_2"> Freshman</label>&nbsp;
+								 				<%= f.radio_button :team_type, '3', class: 'text-center' %>
+								 				<label for ="slate_detail_team_type_3"> MS</label>
+							 			</label> 
+						    </div>
+						<!-- </div></br> -->
+
+						<div class="row"> 
+						    <div class="col-md-4 text-center">
+					    			<div class="form-group">
+											<%= f.label :coach_count, 'COACH:' %>
+					    					<%= f.text_field :coach_count, required: :true, style: 'width: 100px' %>
+					    			</div>
+						    		<div class="form-group">
+											<%= f.label :atheletes_count, 'ATHLETES:' %>
+						    				<%= f.text_field :atheletes_count, required: :true, style: 'width: 100px' %>
+						    		</div>
+						    		<div class="form-group">
+											<%= f.label :manager_count, 'MANAGERS:' %>
+						    				<%= f.text_field :manager_count, required: :true, style: 'width: 100px' %>
+						    		</div>
+						    </div>
+								<div class="col-md-4 text-center">
+									<h5>Image Count </h5>
+								</div>
+								<div class="col-md-4 text-center">
+									<div class="form-group">
+										<%= f.label :image_start, 'Starting:' %>&nbsp;
+					    			<%= f.number_field :image_start, required: :true, style: 'width: 100px' %>
+					    		</div>
+					    		<div class="form-group">
+										<%= f.label :image_end, 'End:' %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					    			<%= f.number_field :image_end, required: :true, style: 'width: 100px', onkeyup: 'MinimumNValidate()' %>
+					    		</div>
+					    		<div class="form-group">
+										<%= f.label :total_count, 'Total' %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					    			<%= f.number_field :total_count, style: 'width: 100px' %>
+					    		</div>
+					    	</div>
+						</div><br>
+						<div class="row">
+								<div class="form-group">
+									&nbsp;&nbsp;&nbsp;&nbsp;<%= f.label :note, 'Note' %>&nbsp;&nbsp;&nbsp;&nbsp;
+				    			<%= f.text_area :note, class: 'form-control',  rows: '4', cols:'50' %>
+				    		</div>
+						</div>
+					  		<%= f.hidden_field :photographer_id,   value: current_user.id %>
+					  		<%= f.hidden_field :season_name,   value: @slate.season_name %>
+					  <br>
+
+					  <div class="d-grid gap-2 col-6 mx-auto text-center">
+					    <%= f.button "Submit", type: "submit", :class=> "btn", :style=>  'background-color: #7fbde3; color: white;' %>
+					  </div>
+					<% end %>
+			</div>
+	  </div>
+	  <br><br>
+</div>
+<div class="col-6">
+	<div class="card">
+	  <div class="card-header"><h3><%= link_to 'EXPAND', slate_detail_expand_slate_slate_details_path,  class: 'btn btn-default', style: "float: right;"  %></h3></div>
+	  <div class="card-body">
+	  	<table class="table table-bordered text-center">
+	  		<thead>
+	  			<th>SPORT</th>
+	  			<th>TEAM</th>
+	  			<th>GENDER</th>
+	  		</thead>
+	  		<tbody>
+	  			<% @slate_detail_result.each do |sla| %>
+	  			<tr>
+	  				<td><%= sla.sport_name %></td>
+	  				<td><%= slate_team_type(sla.team_type) %></td>
+					<td><%= slate_gender_type(sla.gender_type)  %></td>
+	  			</tr>
+	  			<% end %>
+	  		</tbody>
+	  	</table>
+	  </div>	
+	</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+	
+
+	function MinimumNValidate(){
+			var image_start_count = document.getElementById("slate_detail_image_start").value;
+			var image_end_count   = document.getElementById("slate_detail_image_end").value;		
+      var difference = Math.abs(image_end_count - image_start_count) + 1;
+      document.getElementById("slate_detail_total_count").value = difference
+  }
+
+	$(document).ready(function(){ 
+		$("#footer").removeClass("footer");
+		 setTimeout(function(){
+	    	$('.flash-panel').fadeOut();
+	    }, 2000);
+
+		 $("input[type=radio]").click(function () {
+			    if($('#slate_detail_team_type_3')[0].checked) {
+					   $('#slate_detail_note').prop("required", true);
+					} else {
+					 		$('#slate_detail_note').prop("required", false);
+					}
+			});
+
+		 $('#hidden_sport_name').hide();
+		 $('#slate_detail_sport_name').change(function(){
+    		var selectedsport = $(this).children("option:selected").val();
+	    		if(selectedsport == "Other"){
+	    			$('#hidden_sport_name').val(null);
+	    			$('#hidden_sport_name').show();
+	    		}else{
+	    			$('#hidden_sport_name').hide();
+	    			$('#hidden_sport_name').val(selectedsport);
+	    		}
+    	 });
+
+	});
+</script>

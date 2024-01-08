@@ -38,7 +38,7 @@
 			 <div class="row" style="margin-top: 10px;">
 		 			<label class= 'form-control'>
 			 				<%= f.radio_button :position, '0', class: 'text-center' %>
-			 				<label for ="student_position_0">Athelete</label>&nbsp;
+			 				<label for ="student_position_0">Athlete</label>&nbsp;
 			 				<%= f.radio_button :position, '2', class: 'text-center' %>
 			 				<label for ="student_position_2">Manager</label>&nbsp;
 			 				<%= f.radio_button :position, '1', class: 'text-center' %>
@@ -61,6 +61,12 @@
 				  
 				    <%= f.label :student_name, 'Name' %><br>
 				    <%= f.text_field :student_name, class: 'form-control', required: :true %>
+				  
+			 </div>
+			 <div class="row">
+				  
+				    <%= f.label :student_id, 'Student Id' %><br>
+				    <%= f.text_field :student_id, class: 'form-control' %>
 				  
 			 </div>
 			 <!-- <div class="row">

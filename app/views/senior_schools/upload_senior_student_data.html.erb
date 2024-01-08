@@ -1,0 +1,5 @@
+ <%= form_tag(import_student_data_senior_schools_path, method: "post", multipart: true) do %>
+    <%= file_field_tag :file, required: true%>
+    <%= hidden_field_tag :school_id, params[:id] %>
+    <%= submit_tag "Import", type: "submit",class:"btn btn-primary" %>
+ <% end %>

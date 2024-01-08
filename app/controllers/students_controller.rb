@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
 
 	private
 		def student_params
-			params.require(:student).permit(:school_name, :student_name, :student_email, :parent_email, :type_of_sport, :team_type, :photographer_id, :season_type, :event_date, :stu_gender, :position)
+			params.require(:student).permit(:school_name, :student_name, :student_email, :parent_email, :type_of_sport, :team_type, :photographer_id, :season_type, :event_date, :stu_gender, :position, :student_id)
 		end
 	
 

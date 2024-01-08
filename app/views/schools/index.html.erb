@@ -8,36 +8,41 @@
 
 <br><br><br>
 
-<% unless @schools.nil? || @schools.empty? %>
 
 <div class="card">
   <div class="card-header header-style"><h3>SCHOOL DETAILS</h3></div>
-  <div class="card-body">
-   <div class="table-responsive">
-	<table class="table table-bordered text-center" id = "schools_table">
-	<thead>
-		<th>School  Name</th>
-		<th>Season Name</th>
-		<th>Added At</th>
-		<th>Actions</th>
-	</thead>
-	<tbody>
-		<% @schools.each do |sch| %>
-			<tr>
-				<td><%= (sch.school_name).upcase %></td>
-				<td><%= (sch.season_name).upcase %></td>
-				<td><%= date_formatted(sch.created_at)%></td>
-				<td> <%= link_to 'View', new_school_student_path(sch.id),  class: 'btn btn-success'  %> &nbsp;&nbsp;&nbsp;
-					<%= button_tag('Edit'.html_safe, class: 'btn btn-default  btn-edit-school', 'data-school-id': sch.id)%>
-				</td>
-			</tr>
-		<% end %>
-	</tbody>
-	</table>
+  <% unless @schools.nil? || @schools.empty? %>
+		  <div class="card-body">
+		    <div class="table-responsive">
+					<table class="table table-bordered text-center" id = "schools_table">
+						<thead>
+							<th>School  Name</th>
+							<th>Season Name</th>
+							<th>Added At</th>
+							<th>Actions</th>
+						</thead>
+						<tbody>
+							<% @schools.each do |sch| %>
+								<tr>
+									<td><%= (sch.school_name).upcase %></td>
+									<td><%= (sch.season_name).upcase %></td>
+									<td><%= date_formatted(sch.created_at)%></td>
+									<td> <%= link_to 'View', new_school_student_path(sch.id),  class: 'btn btn-success'  %> &nbsp;&nbsp;&nbsp;
+										<%= button_tag('Edit'.html_safe, class: 'btn btn-default  btn-edit-school', 'data-school-id': sch.id)%>
+									</td>
+								</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+		</div>
+	<% else %>
+		<div class = "card-body">
+			<p>Currently there is no data to show.</p>
+		</div>
+	<% end %>
 </div>
-</div>
-</div>
-<% end %>
+
 
 
     <div class="modal fade" id="school_modal_container" tabindex="-1" role="dialog" aria-hidden="true">
@@ -105,6 +110,7 @@
     $('#add_school').on('click', function() {
       showNewSchoolModal();
     });
+
 
     // $('.btn-edit-school').on('click', function() {
 
