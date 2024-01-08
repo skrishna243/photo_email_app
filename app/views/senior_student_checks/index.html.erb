@@ -16,6 +16,7 @@
 						<th>Last Name</th>
 						<th>First Name</th>
 						<th>Email</th>
+						<th>Online Code</th>
 						<th>New Data Entry</th>
 						<th>Session</th>
 						<th>Check In Time</th>
@@ -29,6 +30,7 @@
 							<td><%= stu.last_name %></td>
 							<td><%= stu.first_name %></td>
 							<td><%= stu.email%></td>
+							<td><%= stu.student_online_id%></td>
 							<td><%= new_data_entry(stu.new_data).html_safe%></td>
 							<td><%= session_type(stu.session_type)  %></td>
 							<td><%= datetime_formatted(stu.created_at)%></td>
